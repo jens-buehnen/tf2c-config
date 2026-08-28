@@ -1,9 +1,0 @@
-"Patch"
-{
-	include "materials\darhud\bases\teams\base_red.vmt"
-	
-	insert
-	{
-		"$basetexture"	"darhud\health\healthbar\healthbar_bg_mask"
-	}
-}

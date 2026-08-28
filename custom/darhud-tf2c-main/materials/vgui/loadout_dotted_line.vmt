@@ -1,7 +1,0 @@
-"UnlitGeneric"
-{
-	"$basetexture"	"vgui\loadout_dotted_line"
-	"$vertexcolor"	"1"
-	"$translucent"	"1"
-	"$ignorez"		"1"
-}

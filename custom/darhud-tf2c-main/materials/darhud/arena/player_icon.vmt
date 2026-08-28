@@ -1,7 +1,0 @@
-"UnlitGeneric"
-{
-	"$basetexture" "darhud/arena/player_icon"
-	"$translucent" 1
-	"$ignorez" 1
-	"$vertexcolor" 1
-}
