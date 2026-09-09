@@ -1,0 +1,764 @@
+"Resource/UI/winpanel.res"
+{
+	"TeamScoresPanel"
+	{
+		"controlname"			"EditablePanel"
+		"fieldname"				"TeamScoresPanel"
+		"xpos"					"0"
+		"ypos"					"78"
+		"wide"					"422"
+		"tall"					"90"
+		"visible"				"1"
+
+		"BlueScoreBG"
+		{
+			"controlname"		"EditablePanel"
+			"fieldname"		"BlueScoreBG"
+			"proportionaltoparent"	"1"
+			"xpos"			"0"
+			"ypos"			"15"
+			"wide"			"210"
+			"tall"			"30"
+			"autoResize"	"0"
+			"pinCorner"		"0"
+			"visible"		"1"
+			"enabled"		"1"
+			"border"			"TFFatLineBorderBlueBGMoreOpaque"
+			"scaleimage"		"1"
+			
+			if_3team
+			{
+				"wide"			"140"
+			}
+			
+			if_4team
+			{
+				"wide"			"105"
+			}
+		}
+		"RedScoreBG"
+		{
+			"controlname"		"EditablePanel"
+			"fieldname"		"RedScoreBG"
+			"proportionaltoparent"	"1"
+			"xpos"			"210"
+			"ypos"			"15"
+			"wide"			"210"
+			"tall"			"30"
+			"autoResize"	"0"
+			"pinCorner"		"0"
+			"visible"		"1"
+			"enabled"		"1"
+			"border"			"TFFatLineBorderRedBGMoreOpaque"
+			"scaleimage"		"1"
+			
+			if_3team
+			{
+				"xpos"			"140"
+				"wide"			"140"
+			}
+			
+			if_4team
+			{
+				"xpos"			"105"
+				"wide"			"105"
+			}
+		}
+		"GreenScoreBG"
+		{
+			"controlname"		"EditablePanel"
+			"fieldname"		"GreenScoreBG"
+			"proportionaltoparent"	"1"
+			"xpos"			"0"
+			"ypos"			"15"
+			"wide"			"210"
+			"tall"			"30"
+			"autoResize"	"0"
+			"pinCorner"		"0"
+			"visible"		"1"
+			"enabled"		"1"
+			"border"			"TFFatLineBorderGreenBGMoreOpaque"
+			"scaleimage"		"1"
+			
+			if_3team
+			{
+				"xpos"			"280"
+				"wide"			"140"
+			}
+			
+			if_4team
+			{
+				"xpos"			"210"
+				"wide"			"105"
+			}
+		}
+		"YellowScoreBG"
+		{
+			"controlname"		"EditablePanel"
+			"fieldname"		"YellowScoreBG"
+			"proportionaltoparent"	"1"
+			"xpos"			"210"
+			"ypos"			"15"
+			"wide"			"210"
+			"tall"			"30"
+			"autoResize"	"0"
+			"pinCorner"		"0"
+			"visible"		"1"
+			"enabled"		"1"
+			"border"			"TFFatLineBorderYellowBGMoreOpaque"
+			"scaleimage"		"1"
+			
+			if_3team
+			{
+				"xpos"			"140"
+				"wide"			"140"
+			}
+			
+			if_4team
+			{
+				"xpos"			"315"
+				"wide"			"105"
+			}
+		}
+		"ScoreBGShadow"
+		{
+			"controlname"	"ImagePanel"
+			"fieldname"	"ScoreBGShadow"
+			"proportionaltoparent"	"1"
+			"xpos"		"2"
+			"ypos"		"17"
+			"zpos"		"-1"
+			"wide"		"420"
+			"tall"		"30"
+			"scaleimage"	"1"
+			"image"		"..\darhud\square\square_shadow"
+		}
+
+		"BlueTeamimage"
+		{
+			"controlname"		"ImagePanel"
+			"fieldname"			"BlueTeamimage"
+			"xpos"				"-7"
+			"ypos"				"0"
+			"zpos"				"5"
+			"wide"				"45"
+			"tall"				"26"
+			"visible"			"1"
+			"enabled"			"1"
+			"image"				"resource/svgs/darhud/team_logos/blu.svg"
+			"scaleimage"		"1"
+			"dropshadow"		"1"
+			"dropshadowoffset"	"3"
+			
+			"pin_to_sibling"	"BlueScoreBG"
+			"pin_corner_to_sibling"	"PIN_CENTER_LEFT"
+			"pin_to_sibling_corner"	"PIN_CENTER_LEFT"
+		}
+		"RedTeamimage"
+		{
+			"controlname"		"ImagePanel"
+			"fieldname"			"RedTeamimage"
+			"xpos"				"-7"
+			"ypos"				"0"
+			"zpos"				"5"
+			"wide"				"40"
+			"tall"				"26"
+			"visible"			"1"
+			"enabled"			"1"
+			"image"				"resource/svgs/darhud/team_logos/red.svg"
+			"scaleimage"		"1"
+			"dropshadow"		"1"
+			"dropshadowoffset"	"3"
+			
+			"pin_to_sibling"	"RedScoreBG"
+			"pin_corner_to_sibling"	"PIN_CENTER_RIGHT"
+			"pin_to_sibling_corner"	"PIN_CENTER_RIGHT"
+			
+			"if_3team"
+			{
+				"pin_corner_to_sibling"	"PIN_CENTER_LEFT"
+				"pin_to_sibling_corner"	"PIN_CENTER_LEFT"
+			}
+			"if_4team"
+			{
+				"pin_corner_to_sibling"	"PIN_CENTER_LEFT"
+				"pin_to_sibling_corner"	"PIN_CENTER_LEFT"
+			}
+		}
+		"GreenTeamimage"
+		{
+			"controlname"		"ImagePanel"
+			"fieldname"			"GreenTeamimage"
+			"xpos"				"-7"
+			"ypos"				"0"
+			"zpos"				"5"
+			"wide"				"33"
+			"tall"				"26"
+			"visible"			"1"
+			"enabled"			"1"
+			"image"				"resource/svgs/darhud/team_logos/grn.svg"
+			"scaleimage"		"1"
+			"dropshadow"		"1"
+			"dropshadowoffset"	"3"
+			
+			"pin_to_sibling"	"GreenScoreBG"
+			"pin_corner_to_sibling"	"PIN_CENTER_LEFT"
+			"pin_to_sibling_corner"	"PIN_CENTER_LEFT"
+			
+			"if_3team"
+			{
+				"pin_corner_to_sibling"	"PIN_CENTER_LEFT"
+				"pin_to_sibling_corner"	"PIN_CENTER_LEFT"
+			}
+		}
+		"YellowTeamimage"
+		{
+			"controlname"		"ImagePanel"
+			"fieldname"			"YellowTeamimage"
+			"xpos"				"-7"
+			"ypos"				"0"
+			"zpos"				"5"
+			"wide"				"50"
+			"tall"				"20"
+			"visible"			"1"
+			"enabled"			"1"
+			"image"				"resource/svgs/darhud/team_logos/ylw.svg"
+			"scaleimage"		"1"
+			"dropshadow"		"1"
+			"dropshadowoffset"	"3"
+			
+			"pin_to_sibling"	"YellowScoreBG"
+			"pin_corner_to_sibling"	"PIN_CENTER_RIGHT"
+			"pin_to_sibling_corner"	"PIN_CENTER_RIGHT"
+			
+			"if_3team"
+			{
+				"pin_corner_to_sibling"	"PIN_CENTER_LEFT"
+				"pin_to_sibling_corner"	"PIN_CENTER_LEFT"
+			}
+			"if_4team"
+			{
+				"pin_corner_to_sibling"	"PIN_CENTER_LEFT"
+				"pin_to_sibling_corner"	"PIN_CENTER_LEFT"
+			}
+		}
+	
+		"BlueTeamScore"
+		{
+			"controlname"		"CExLabel"
+			"fieldname"			"BlueTeamScore"
+			"font"				"HudFontGiantBold"
+			"labelText"			"%blueteamscore%"
+			"textAlignment"		"center"
+			"xpos"				"0"
+			"ypos"				"10" 
+			"zpos"				"5"
+			"wide"				"50"
+			"tall"				"40"
+			"autoResize"		"0"
+			"pinCorner"			"0"
+			"visible"			"1"
+			"enabled"			"1"
+			"dropshadow_override"	"1"
+			"dropshadowoffset"	"3"
+			
+			"pin_to_sibling"		"BlueScoreBG"
+			"pin_corner_to_sibling"	"PIN_TOPRIGHT"
+			"pin_to_sibling_corner"	"PIN_TOPRIGHT"
+			
+			"if_3team"
+			{
+				"pin_corner_to_sibling"	"PIN_TOPRIGHT"
+				"pin_to_sibling_corner"	"PIN_TOPRIGHT"
+			}
+			"if_4team"
+			{
+				"pin_corner_to_sibling"	"PIN_TOPRIGHT"
+				"pin_to_sibling_corner"	"PIN_TOPRIGHT"
+			}
+		}
+		
+		"RedTeamScore"
+		{
+			"controlname"		"CExLabel"
+			"fieldname"			"RedTeamScore"
+			"font"				"HudFontGiantBold"
+			"labelText"			"%redteamscore%"
+			"textAlignment"		"center"
+			"xpos"				"0"
+			"ypos"				"10" 
+			"zpos"				"4"
+			"wide"				"50"
+			"tall"				"40"
+			"autoResize"		"0"
+			"pinCorner"			"0"
+			"visible"			"1"
+			"enabled"			"1"
+			"dropshadow_override"		"1"
+			"dropshadowoffset"	"3"
+			
+			"pin_to_sibling"		"RedScoreBG"
+			"pin_corner_to_sibling"	"PIN_TOPLEFT"
+			"pin_to_sibling_corner"	"PIN_TOPLEFT"
+			
+			"if_3team"
+			{
+				"pin_corner_to_sibling"	"PIN_TOPRIGHT"
+				"pin_to_sibling_corner"	"PIN_TOPRIGHT"
+			}
+			"if_4team"
+			{
+				"pin_corner_to_sibling"	"PIN_TOPRIGHT"
+				"pin_to_sibling_corner"	"PIN_TOPRIGHT"
+			}
+		}
+				
+		"GreenTeamScore"
+		{
+			"controlname"		"CExLabel"
+			"fieldname"			"GreenTeamScore"
+			"font"				"HudFontGiantBold"
+			"labelText"			"%greenteamscore%"
+			"textAlignment"		"center"
+			"xpos"				"0"
+			"ypos"				"10" 
+			"zpos"				"5"
+			"wide"				"50"
+			"tall"				"40"
+			"autoResize"		"0"
+			"pinCorner"			"0"
+			"visible"			"1"
+			"enabled"			"1"
+			"dropshadow_override"		"1"
+			"dropshadowoffset"	"3"
+			
+			"pin_to_sibling"		"GreenScoreBG"
+			"pin_corner_to_sibling"	"PIN_TOPRIGHT"
+			"pin_to_sibling_corner"	"PIN_TOPRIGHT"
+			
+			"if_3team"
+			{
+				"pin_corner_to_sibling"	"PIN_TOPRIGHT"
+				"pin_to_sibling_corner"	"PIN_TOPRIGHT"
+			}
+			"if_4team"
+			{
+				"pin_corner_to_sibling"	"PIN_TOPRIGHT"
+				"pin_to_sibling_corner"	"PIN_TOPRIGHT"
+			}
+		}
+					
+		"YellowTeamScore"
+		{
+			"controlname"		"CExLabel"
+			"fieldname"			"YellowTeamScore"
+			"font"				"HudFontGiantBold"
+			"labelText"			"%yellowteamscore%"
+			"textAlignment"		"center"
+			"xpos"				"0"
+			"ypos"				"10" 
+			"zpos"				"4"
+			"wide"				"50"
+			"tall"				"40"
+			"autoResize"		"0"
+			"pinCorner"			"0"
+			"visible"			"1"
+			"enabled"			"1"
+			"dropshadow_override"		"1"
+			"dropshadowoffset"	"3"
+			
+			"pin_to_sibling"		"YellowScoreBG"
+			"pin_corner_to_sibling"	"PIN_TOPLEFT"
+			"pin_to_sibling_corner"	"PIN_TOPLEFT"
+			
+			"if_3team"
+			{
+				"pin_corner_to_sibling"	"PIN_TOPRIGHT"
+				"pin_to_sibling_corner"	"PIN_TOPRIGHT"
+			}
+			"if_4team"
+			{
+				"pin_corner_to_sibling"	"PIN_TOPRIGHT"
+				"pin_to_sibling_corner"	"PIN_TOPRIGHT"
+			}
+		}
+	}
+	"WinPanelBGBorder"
+	{
+		"controlname"			"EditablePanel"
+		"fieldname"			"WinPanelBGBorder"
+		"xpos"				"60"
+		"ypos"				"r125"
+		"zpos"				"0"
+		"wide"				"300"
+		"tall"				"120"
+		"visible"			"1"
+		"border"				"TFFatLineBorderBlueBG"
+		"proportionaltoparent"	"1"
+	}
+	"WinPanelBGBorderShadow"
+	{
+		"controlname"			"ImagePanel"
+		"fieldname"			"WinPanelBGBorderShadow"
+		"pin_to_sibling"		"WinPanelBGBorder"
+		"xpos"				"-2"
+		"ypos"				"-2"
+		"zpos"				"-1"
+		"wide"				"300"
+		"tall"				"120"
+		"visible"			"1"
+		"enabled"			"1"
+		"image"				"..\darhud\square\square_shadow"
+		"scaleimage"			"1"
+		"proportionaltoparent"	"1"
+	}
+
+	"WinningTeamLabel"
+	{	
+		"controlname"			"CExLabel"
+		"fieldname"			"WinningTeamLabel"
+		"font"				"ScoreboardMedium"
+		"fgcolor_override"	"GeneralLabel"
+		"xpos"				"75"
+		"ypos"				"r123"
+		"zpos"				"1"
+		"wide"				"268"
+		"tall"				"20"
+		"visible"			"1"
+		"labelText"			"%WinningTeamLabel%"
+		"textAlignment"		"center"
+		"dropshadow"			"1"
+		"dropshadowoffset"	"2"
+	}
+	"AdvancingTeamLabel"
+	{	
+		"controlname"			"CExLabel"
+		"fieldname"			"AdvancingTeamLabel"
+		"font"				"ScoreboardMedium"
+		"fgcolor_override"	"GeneralLabel"
+		"xpos"				"75"
+		"ypos"				"r123"
+		"zpos"				"1"
+		"wide"				"268"
+		"tall"				"20"
+		"visible"			"1"
+		"labelText"			"%AdvancingTeamLabel%"
+		"textAlignment"		"center"
+		"dropshadow"			"1"
+		"dropshadowoffset"	"2"
+	}
+	"WinReasonLabel"
+	{	
+		"controlname"			"CExLabel"
+		"fieldname"			"WinReasonLabel"
+		"font"				"WinPanelDetailsFont"
+		"fgcolor_override"	"GeneralLabel"
+		"xpos"				"63"
+		"ypos"				"r108"
+		"zpos"				"1"
+		"wide"				"294"
+		"tall"				"18"
+		"visible"			"1"
+		"labelText"			"%WinReasonLabel%"
+		"centerwrap"			"1"
+		"dropshadow"			"1"
+		"dropshadowoffset"	"2"
+	}
+	"DetailsLabel"
+	{	
+		"controlname"			"CExLabel"
+		"fieldname"			"DetailsLabel"
+		"font"				"WinPanelDetailsFont"
+		"fgcolor_override"	"GeneralLabel"
+		"xpos"				"63"
+		"ypos"				"r94"
+		"zpos"				"1"
+		"wide"				"294"
+		"tall"				"10"
+		"visible"			"1"
+		"labelText"			"%DetailsLabel%"
+		"textAlignment"		"center"
+		"dropshadow"			"1"
+		"dropshadowoffset"	"2"
+	}
+
+	"ShadedBar"
+	{
+		"controlname"			"EditablePanel"
+		"fieldname"			"ShadedBar"
+		"xpos"				"60"
+		"ypos"				"r83"
+		"zpos"				"0"
+		"wide"				"300"
+		"tall"				"78"
+		"visible"			"1"
+		"bgcolor_override"	"GeneralBackground"
+		"proportionaltoparent"	"1"
+	}
+
+	"TopPlayersLabel"
+	{	
+		"controlname"			"CExLabel"
+		"fieldname"			"TopPlayersLabel"
+		"font"				"HudFontSmallest"
+		"fgcolor_override"	"GeneralLabel"
+		"xpos"				"78"
+		"ypos"				"r83"
+		"zpos"				"3"
+		"wide"				"200"
+		"tall"				"20"
+		"visible"			"1"
+		"labelText"			"%TopPlayersLabel%"
+		"textAlignment"		"south-west"
+		"dropshadow"			"1"
+		"dropshadowoffset"	"2"
+	}
+	"PointsThisRoundLabel"
+	{	
+		"controlname"			"CExLabel"
+		"fieldname"			"PointsThisRoundLabel"
+		"font"				"HudFontSmallest"
+		"fgcolor_override"	"GeneralLabel"
+		"xpos"				"199"
+		"ypos"				"r83"
+		"zpos"				"3"
+		"wide"				"140"
+		"tall"				"20"
+		"visible"			"1"
+		"labelText"			"#Winpanel_PointsThisRound"
+		"textAlignment"		"south-east"
+		"dropshadow"			"1"
+		"dropshadowoffset"	"2"
+	}
+	"HorizontalLine"
+	{
+		"controlname"			"ImagePanel"
+		"fieldname"			"HorizontalLine"
+		"xpos"				"78"
+		"ypos"				"r63"
+		"zpos"				"3"
+		"wide"				"264"
+		"tall"				"1"
+		"visible"			"1"
+		"fillcolor"			"GeneralLabel"
+		"PaintBackgroundType"	"0"
+		"dropshadow"			"1"
+		"dropshadowoffset"	"2"
+	}
+	"Player1Avatar"
+	{
+		"controlname"		"CAvatarImagePanel"
+		"fieldname"		"Player1Avatar"
+		"xpos"			"82"
+		"ypos"			"r58"
+		"zpos"			"3"
+		"wide"			"14"
+		"tall"			"14"
+		"visible"		"1"
+		"image"			""
+		"scaleimage"		"1"
+	}
+	"Player1Name"
+	{	
+		"controlname"			"CExLabel"
+		"fieldname"				"Player1Name"
+		"font"					"WinpanelStatsFont"
+		"xpos"					"6"
+		"ypos"					"0"
+		"zpos"					"3"
+		"wide"					"150"
+		"tall"					"18"
+		"visible"				"1"
+		"enabled"				"1"
+		"labelText"				""
+		"textAlignment"			"west"
+		"dropshadow"				"1"
+		"dropshadowoffset"		"2"
+		
+		"pin_to_sibling"		"Player1Avatar"
+		"pin_corner_to_sibling"	"PIN_CENTER_LEFT"
+		"pin_to_sibling_corner"	"PIN_CENTER_RIGHT"
+	}
+	"Player1Class"
+	{
+		"controlname"	"ImagePanel"
+		"fieldname"		"Player1Class"
+		"xpos"			"10"
+		"ypos"			"0"
+		"zpos"			"3"
+		"wide"			"12"
+		"tall"			"12"
+		"visible"		"1"
+		"enabled"		"1"
+		"scaleimage"	"1"
+		
+		"pin_to_sibling"		"Player1Name"
+		"pin_corner_to_sibling"	"PIN_CENTER_LEFT"
+		"pin_to_sibling_corner"	"PIN_CENTER_RIGHT"
+	}
+	"Player1Score"
+	{	
+		"controlname"			"CExLabel"
+		"fieldname"				"Player1Score"
+		"font"					"WinpanelStatsFont"
+		"xpos"					"46"
+		"ypos"					"0"
+		"zpos"					"3"
+		"wide"					"22"
+		"tall"					"18"
+		"visible"				"1"
+		"enabled"				"1"
+		"labelText"				""
+		"textAlignment"			"center"
+		"dropshadow"				"1"
+		"dropshadowoffset"		"2"
+		
+		"pin_to_sibling"		"Player1Class"
+		"pin_corner_to_sibling"	"PIN_CENTER_LEFT"
+		"pin_to_sibling_corner"	"PIN_CENTER_RIGHT"
+	}
+	"Player2Avatar"
+	{
+		"controlname"		"CAvatarImagePanel"
+		"fieldname"		"Player2Avatar"
+		"xpos"			"82"
+		"ypos"			"r41"
+		"zpos"			"3"
+		"wide"			"14"
+		"tall"			"14"
+		"visible"		"1"
+		"image"			""
+		"scaleimage"		"1"
+	}
+	"Player2Name"
+	{	
+		"controlname"			"CExLabel"
+		"fieldname"				"Player2Name"
+		"font"					"WinpanelStatsFont"
+		"xpos"					"6"
+		"ypos"					"0"
+		"zpos"					"3"
+		"wide"					"150"
+		"tall"					"18"
+		"visible"				"1"
+		"enabled"				"1"
+		"labelText"				""
+		"textAlignment"			"west"
+		"dropshadow"				"1"
+		"dropshadowoffset"		"2"
+		
+		"pin_to_sibling"		"Player2Avatar"
+		"pin_corner_to_sibling"	"PIN_CENTER_LEFT"
+		"pin_to_sibling_corner"	"PIN_CENTER_RIGHT"
+	}
+	"Player2Class"
+	{
+		"controlname"	"ImagePanel"
+		"fieldname"		"Player2Class"
+		"xpos"			"10"
+		"ypos"			"0"
+		"zpos"			"3"
+		"wide"			"12"
+		"tall"			"12"
+		"visible"		"1"
+		"enabled"		"1"
+		"scaleimage"	"1"
+		
+		"pin_to_sibling"		"Player2Name"
+		"pin_corner_to_sibling"	"PIN_CENTER_LEFT"
+		"pin_to_sibling_corner"	"PIN_CENTER_RIGHT"
+	}
+	"Player2Score"
+	{	
+		"controlname"			"CExLabel"
+		"fieldname"				"Player2Score"
+		"font"					"WinpanelStatsFont"
+		"xpos"					"46"
+		"ypos"					"0"
+		"zpos"					"3"
+		"wide"					"22"
+		"tall"					"18"
+		"visible"				"1"
+		"enabled"				"1"
+		"labelText"				""
+		"textAlignment"			"center"
+		"dropshadow"				"1"
+		"dropshadowoffset"		"2"
+		
+		"pin_to_sibling"		"Player2Class"
+		"pin_corner_to_sibling"	"PIN_CENTER_LEFT"
+		"pin_to_sibling_corner"	"PIN_CENTER_RIGHT"
+	}
+	"Player3Avatar"
+	{
+		"controlname"		"CAvatarImagePanel"
+		"fieldname"		"Player3Avatar"
+		"xpos"			"82"
+		"ypos"			"r24"
+		"zpos"			"3"
+		"wide"			"14"
+		"tall"			"14"
+		"visible"		"1"
+		"image"			""
+		"scaleimage"		"1"
+	}
+	"Player3Name"
+	{	
+		"controlname"			"CExLabel"
+		"fieldname"				"Player3Name"
+		"font"					"WinpanelStatsFont"
+		"xpos"					"6"
+		"ypos"					"0"
+		"zpos"					"3"
+		"wide"					"150"
+		"tall"					"18"
+		"visible"				"1"
+		"enabled"				"1"
+		"labelText"				""
+		"textAlignment"			"west"
+		"dropshadow"				"1"
+		"dropshadowoffset"		"2"
+		
+		"pin_to_sibling"		"Player3Avatar"
+		"pin_corner_to_sibling"	"PIN_CENTER_LEFT"
+		"pin_to_sibling_corner"	"PIN_CENTER_RIGHT"
+	}
+	"Player3Class"
+	{
+		"controlname"	"ImagePanel"
+		"fieldname"		"Player3Class"
+		"xpos"			"10"
+		"ypos"			"0"
+		"zpos"			"3"
+		"wide"			"12"
+		"tall"			"12"
+		"visible"		"1"
+		"enabled"		"1"
+		"scaleimage"	"1"
+		
+		"pin_to_sibling"		"Player3Name"
+		"pin_corner_to_sibling"	"PIN_CENTER_LEFT"
+		"pin_to_sibling_corner"	"PIN_CENTER_RIGHT"
+	}
+	"Player3Score"
+	{	
+		"controlname"			"CExLabel"
+		"fieldname"				"Player3Score"
+		"font"					"WinpanelStatsFont"
+		"xpos"					"46"
+		"ypos"					"0"
+		"zpos"					"3"
+		"wide"					"22"
+		"tall"					"18"
+		"visible"				"1"
+		"enabled"				"1"
+		"labelText"				""
+		"textAlignment"			"center"
+		"dropshadow"				"1"
+		"dropshadowoffset"		"2"
+		
+		"pin_to_sibling"		"Player3Class"
+		"pin_corner_to_sibling"	"PIN_CENTER_LEFT"
+		"pin_to_sibling_corner"	"PIN_CENTER_RIGHT"
+	}
+}

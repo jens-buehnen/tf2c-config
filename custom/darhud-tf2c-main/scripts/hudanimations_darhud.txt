@@ -1,0 +1,577 @@
+event HintMessageShow
+{
+	StopPanelAnimations	HudHintDisplay	0.0
+
+	Animate HudHintDisplay	HintSize	"1"				Deaccel 0.0	0.3
+	Animate HudHintDisplay	FgColor		"HintText" 		Linear	0.4	0.4
+
+	Animate HudHintDisplay	FgColor		"HintText" 		Linear	1.5 0.01
+	Animate HudHintDisplay	FgColor		"HintTextFlash"	Linear	2.0 0.2
+	Animate HudHintDisplay	FgColor		"HintText" 		Linear	2.2 0.2
+	Animate HudHintDisplay	FgColor		"HintTextFlash"	Linear	3.0 0.2
+	Animate HudHintDisplay	FgColor		"HintText" 		Linear	3.2	0.2
+
+	Animate HudHintDisplay	FgColor		"HintTextFade"	Linear  10.0	0.2
+	Animate HudHintDisplay	HintSize	"0"				Deaccel 10.2	0.3
+}
+
+event HintMessageHide
+{
+	Animate HudHintDisplay	FgColor		"HintTextFade"	Linear	0.0	0.2
+	Animate HudHintDisplay	HintSize	"0"				Deaccel	0.2	0.3
+}
+
+//==========================================================================================================================
+
+event HudCartAlarmPulse
+{
+	Animate	EscortItemImageAlert	Alpha	"255"	Linear	0.0		0.075
+	Animate	EscortItemImageAlert	Alpha	"0"		Linear	0.125	0.075
+	
+	RunEvent	HudCartAlarmPulseLoop	0.25
+}
+
+event HudCartAlarmPulseLoop
+{
+	RunEvent	HudCartAlarmPulse	0.0
+}
+
+event HudCartAlarmPulseStop
+{
+	StopEvent	HudCartAlarmPulse		0.0
+	StopEvent	HudCartAlarmPulseLoop	0.0
+}
+
+//==========================================================================================================================
+
+event DamagedPlayer
+{
+	Animate	DamageAccountValue	Alpha	"255"	Linear	0.0		0.0
+	Animate	DamageAccountValue	Alpha	"48"	Linear	0.01	0.24
+	Animate	DamageAccountValue	Alpha	"0"		Linear	1		1
+}
+
+//==========================================================================================================================
+
+event HudSpyDisguiseFadeIn
+{
+	RunEvent	HudSpyDisguiseChanged	0.0
+	Animate		PlayerStatusSpyImage	Alpha	"255"	Linear 0.9	0.1
+}
+
+event HudSpyDisguiseFadeOut
+{
+	RunEvent	HudSpyDisguiseChanged	0.0
+	Animate		PlayerStatusSpyImage	Alpha	"0"		Linear 0.9	0.1
+}
+
+//==========================================================================================================================
+
+event OvertimeShow
+{
+	Animate	OvertimeLabel	Alpha	"255"	Linear	0.0	0.1	
+	Animate	OvertimeBG		Alpha	"255"	Linear	0.0	0.1	
+}
+
+//==========================================================================================================================
+
+event HudHealthBonusPulse
+{
+	Animate	PlayerStatusHealthBonusImage Alpha	"255"	Linear 0.0 0.2
+	Animate	PlayerStatusHealthBonusImage Alpha	"0"		Linear 0.2 0.4
+
+	Animate	PlayerStatusHealthImageOverheal 	Alpha		"204"			Linear 0.0 0.0
+	
+	Animate	PlayerHealthValue					FgColor		"HealthGain" Accel 0.0 0.0
+	Animate PlayerStatusHealthValue 			FgColor		"HealthGain" Accel 0.0 0.0
+	Animate PlayerStatusHealthValueSpectator 	FgColor		"HealthGain" Accel 0.0 0.0
+	Animate PlayerStatusHealthValueFreezePanel 	FgColor		"HealthGain" Accel 0.0 0.0
+
+	RunEvent HudHealthBonusPulseLoop	0.4
+}
+
+event HudHealthBonusPulseStop
+{
+	StopEvent HudHealthBonusPulse		0.0
+	StopEvent HudHealthBonusPulseLoop	0.0
+	
+	Animate	PlayerStatusHealthImageOverheal	Alpha		"0"			Linear 0.0 0.0
+	
+	Animate	PlayerHealthValue					FgColor		"HealthNormal" Accel 0.0 0.0
+	Animate PlayerStatusHealthValue 			FgColor		"HealthNormal" Accel 0.0 0.0
+	Animate PlayerStatusHealthValueSpectator 	FgColor		"HealthNormal" Accel 0.0 0.0
+	Animate PlayerStatusHealthValueFreezePanel 	FgColor		"HealthNormal" Accel 0.0 0.0
+}
+
+//==========================================================================================================================
+
+event HudHealthDyingPulse
+{
+	Animate	PlayerStatusHealthBonusImage 		Alpha		"255"			Linear 0.0 0.075
+	Animate	PlayerStatusHealthBonusImage 		Alpha		"0"				Linear 0.125 0.075
+	
+	Animate	PlayerStatusHealthImageOverheal	Alpha		"0"			Linear 0.0 0.0
+	
+	Animate	PlayerHealthValue					FgColor		"HealthLow"	Accel 0.0 0.0
+	Animate PlayerStatusHealthValue 			FgColor		"HealthLow" Accel 0.0 0.0
+	Animate PlayerStatusHealthValueSpectator 	FgColor		"HealthLow" Accel 0.0 0.0
+	Animate PlayerStatusHealthValueFreezePanel 	FgColor		"HealthLow" Accel 0.0 0.0
+	
+	RunEvent HudHealthDyingPulseLoop	0.25
+}
+
+event HudHealthDyingPulseStop
+{
+	StopEvent HudHealthDyingPulse 		0.0
+	StopEvent HudHealthDyingPulseLoop	0.0
+	
+	Animate	PlayerStatusHealthImageOverheal	Alpha		"0"			Linear 0.0 0.0
+	
+	Animate	PlayerHealthValue					FgColor		"HealthNormal" Accel 0.0 0.0
+	Animate PlayerStatusHealthValue 			FgColor		"HealthNormal" Accel 0.0 0.0
+	Animate PlayerStatusHealthValueSpectator 	FgColor		"HealthNormal" Accel 0.0 0.0
+	Animate PlayerStatusHealthValueFreezePanel 	FgColor		"HealthNormal" Accel 0.0 0.0
+}
+
+//==========================================================================================================================
+
+event HudLowAmmoPulse
+{
+	Animate	HudWeaponLowAmmoImage		Alpha		"255"		Linear 0.0 0.075
+	Animate	HudWeaponLowAmmoImage		Alpha		"0"			Linear 0.125 0.075
+	
+	Animate	AmmoInClip					FgColor		"AmmoLow"	Accel 0.0 0.0
+	Animate AmmoInReserve				FgColor		"AmmoLow"	Accel 0.0 0.0
+	Animate	AmmoNoClip					FgColor		"AmmoLow"	Accel 0.0 0.0
+	
+	RunEvent HudLowAmmoPulseLoop	0.25
+}
+
+event HudLowAmmoPulseLoop
+{
+	RunEvent HudLowAmmoPulse 0.0
+}
+
+event HudLowAmmoPulseStop
+{
+	StopEvent HudLowAmmoPulse 0.0
+	StopEvent HudLowAmmoPulseLoop 0.0
+	
+	Animate	AmmoInClip					FgColor		"AmmoNormal" Accel 0.0 0.0
+	Animate AmmoInReserve				FgColor		"AmmoReserve" Accel 0.0 0.0
+	Animate	AmmoNoClip					FgColor		"AmmoNormal" Accel 0.0 0.0
+}
+
+//==========================================================================================================================
+
+event HudMedicCharged
+{
+	RunEvent HudMedicChargedStart 0.0
+}
+
+event HudMedicChargedStart
+{
+	Animate ChargedImage Alpha "255"	Linear	0.0 0.001
+	Animate ChargedImage Position "0 -52"	Linear	0.0 0.001
+	Animate	ChargedImagePanel	Position	"0 -54"	Linear	0.0 0.001
+	Animate	ChargedImagePanel	Size	"52 0"	Linear	0.0 0.001
+	
+	Animate	ChargedImagePanel	Position	"0 -2"	Linear	0.001 0.2
+	Animate	ChargedImagePanel	Size	"52 52"	Linear	0.001 0.2
+	Animate ChargedImage Position "0 0"	Linear	0.001 0.2
+	
+	RunEvent	HudMedicChargedLoop	0.2
+}
+
+event HudMedicChargedLoop
+{
+	Animate	ChargeLabel 	FgColor		"UberForeground"		Linear 0.0 0.1
+	Animate	ChargeLabel 	FgColor		"HealthGain"		Linear 0.3 0.4
+	
+	Animate	ChargeMeter 	FgColor		"UberForeground"		Linear 0.0 0.1
+	Animate	ChargeMeter 	FgColor		"HealthGain"		Linear 0.3 0.4
+	
+	Animate	ChargedImage 	Alpha		"204"	Linear 0.0 0.1
+	Animate	ChargedImage 	Alpha		"0"		Linear 0.3 0.4
+
+	RunEvent HudMedicChargedRestart	0.6
+}
+
+event HudMedicChargedRestart
+{
+	RunEvent HudMedicChargedLoop 0.0
+}
+
+event HudMedicChargedStop
+{
+	StopEvent HudMedicCharged 0.0
+	StopEvent HudMedicChargedStart 0.0
+	StopEvent HudMedicChargedLoop 0.0
+	StopEvent HudMedicChargedRestart 0.0
+	
+	Animate	ChargeLabel	FgColor	"UberForeground"	Linear 0.0 0.0001
+	Animate	ChargeMeter	FgColor	"UberForeground"	Linear 0.0 0.0001
+	
+	Animate	ChargedImage	Alpha		"0"		Linear 0.0 0.2
+	Animate ChargedImage Position "0 -52"	Linear	0.2 0.001
+	
+	Animate	ChargedImagePanel	Position	"0 -54"	Linear	0.2 0.001
+	Animate	ChargedImagePanel	Size	"52 0"	Linear	0.2 0.001
+}
+
+//==========================================================================================================================
+
+event HudSnapShotReminderIn
+{
+	Animate ScreenshotPanel		Position	"c-100 -50"	Linear 0.0 0.001
+	Animate ScreenshotPanel		Position	"c-100 6"	Spline 0.001 0.2
+}
+
+event HudReplayReminderIn	// Places the replay reminder in the same place as the snapshot reminder
+{
+	Animate ReplayReminder		Position	"c-100 -50"	Linear 0.0 0.001
+	Animate ReplayReminder		Position	"c-100 6"	Spline 0.001 0.2
+}
+
+event HudReplayReminderIn2	// Puts the panel below the snapshot panel
+{
+	Animate ReplayReminder		Position	"c-100 -50"	Linear 0.0 0.001
+	Animate ReplayReminder		Position	"c-100 48"	Spline 0.001 0.2
+}
+
+//==========================================================================================================================
+
+event RDPositiveScorePulse { }
+event RDNegativeScorePulse { }
+
+//==========================================================================================================================
+
+event HudSpyDisguiseChanged
+{
+	Animate PlayerStatusSpyOutlineImage		Alpha		"255"			Linear 0.0 0.2
+	
+	Animate PlayerStatusSpyOutlineImage		Position	"c-225 r220"	Linear 0.0 0.2
+	Animate PlayerStatusSpyOutlineImage		Size		"220 220"		Linear 0.0 0.2
+
+	RunEvent HudSpyDisguiseHide	0.7
+}
+
+event HudSpyDisguiseHide
+{
+	Animate PlayerStatusSpyOutlineImage		Position	"3 413"			Linear 0.0 0.2
+	Animate PlayerStatusSpyOutlineImage		Size		"55 55"			Linear 0.0 0.2
+	
+	Animate PlayerStatusSpyOutlineImage		Alpha		"0"				Linear 0.2 0.1
+}
+
+event HudSpyDisguiseFadeIn
+{
+	RunEvent HudSpyDisguiseChanged	0
+	Animate PlayerStatusSpyImage			Alpha		"255"			Linear 0.9 0.1	
+}
+
+event HudSpyDisguiseFadeOut
+{
+	RunEvent HudSpyDisguiseChanged	0
+	Animate PlayerStatusSpyImage			Alpha		"0"				Linear 0.9 0.1	
+}
+
+//==================================================================================
+
+event FlagOutline
+{
+	RunEvent FlagOutlineHide 0.0
+	Animate OutlineImage	Alpha		"255"			Linear 0.1 0.2
+	
+	Animate OutlineImage	Position	"c-200 c-200"		Linear 0.1 0.2
+	Animate OutlineImage	Size		"400 400"		Linear 0.1 0.2
+
+	Animate OutlineImage	Position	"c-50 r143"		Linear 0.7 0.2
+	Animate OutlineImage	Size		"100 100"		Linear 0.7 0.2
+	
+	Animate OutlineImage	Alpha		"0"				Linear 0.9 0.1
+}
+
+//==========================================================================================================================
+
+event HudVIPOneLifePulse
+{
+	Animate	WarnBG 	Alpha		"255"		Linear 0.0 0.075
+	Animate	WarnBG 	Alpha		"0"			Linear 0.125 0.075
+
+	RunEvent HudVIPOneLifePulseLoop	0.25
+}
+
+event HudVIPOneLifePulseLoop
+{
+	RunEvent HudVIPOneLifePulse 0.0
+}
+
+event HudVIPOneLifePulseStop
+{
+	StopEvent HudVIPOneLifePulse 0.0
+	StopEvent HudVIPOneLifePulseLoop 0.0
+}
+
+//==========================================================================================================================
+
+event ArenaVsPanelOnShow
+{
+	Animate bluepanelanchor	Position	"0 50"		Linear 0.0 0.001
+	Animate redpanelanchor	Position	"r0 103"	Linear 0.0 0.001
+	
+	Animate bluenameanchor	Position	"0 0"	Linear 0.0 0.001
+	Animate rednameanchor	Position	"r0 38"	Linear 0.0 0.001
+	
+	Animate bluepanel	Alpha	"255"	Linear 0.0 0.001
+	Animate redpanel	Alpha	"255"	Linear 0.0 0.001
+	
+	Animate	blueavataranchor	Position	"-100 52"	Linear 0.0 0.001
+	Animate	redavataranchor		Position	"r-100 0"	Linear 0.0 0.001
+	
+	Animate vslabel	Alpha	"0"		Linear 0.0 0.001
+		
+	RunEvent ArenaVsPanelSlideIn	1.0
+	RunEvent ArenaVsPanelSlideOut	5.0
+}
+
+event ArenaVsPanelSlideIn
+{
+	Animate bluepanelanchor	Position	"r0 50"	Deaccel 0.0 0.2
+	Animate redpanelanchor	Position	"0 103"	Deaccel 0.0 0.2
+	Animate vslabel	Alpha	"255"	Linear 0.15 0.2
+	
+	Animate	bluenameanchor	Position	"r0 0"	Spline 1.0 1.0
+	Animate	rednameanchor		Position	"0 38"	Spline 1.0 1.0
+	
+	Animate	blueavataranchor	Position	"c-36 52"	Spline 1.0 1.0
+	Animate	redavataranchor		Position	"c36 0"	Spline 1.0 1.0
+}
+
+event ArenaVsPanelSlideOut
+{
+	Animate	bluenameanchor	Position	"r-50 0"	Spline 0.0 1.0
+	Animate	rednameanchor		Position	"-50 38"	Spline 0.0 1.0
+	
+	Animate bluepanel	Alpha	"0"	Linear 0.0 0.5
+	Animate redpanel	Alpha	"0"	Linear 0.0 0.5
+	Animate vslabel		Alpha	"0"	Linear 0.0 0.5
+}
+
+//==========================================================================================================================
+
+event PrepareMainMenu
+{
+	Animate		VersionLabel		Alpha				"0"					Linear	0.0	0.0
+	Animate		VersionLabel		Position			"r120	10"			Linear	0.0	0.0
+	
+	Animate		DarHudVersionLabel	Alpha				"0"					Linear	0.0	0.0
+	Animate		DarHudVersionLabel	Position			"r120	23"			Linear	0.0	0.0
+	
+	Animate		LogoContainer		Alpha				"0"					Spline	0.0	1.0
+	
+	Animate		VerticalBG			Alpha				"0"					Linear	0.0	0.0
+	Animate		VerticalBG			Position			"c-300	-40"		Linear	0.0	0.0
+	
+	Animate		VerticalBGLeft		Alpha				"0"					Linear	0.0	0.0
+	Animate		VerticalBGRight		Alpha				"0"					Linear	0.0	0.0
+	
+	Animate		VanityPanel			Alpha				"0"					Linear	0.0	0.0
+	
+	SetVisible	FriendPanel			0	0.0
+	Animate		FriendPanel			Position			"c-300	r0"			Linear	0.0	0.0
+	
+	Animate		LinkPanel			Alpha				"0"					Linear	0.0	0.0
+	Animate		LinkPanel			Position			"r100	r-2"		Linear	0.0	0.0
+}
+
+event ShowMainMenu
+{	
+	Animate		VersionLabel		Alpha				"255"				Spline	1.0	1.0
+	Animate		VersionLabel		Position			"r160	10"			Spline	1.0	1.0
+	
+	Animate		DarHudVersionLabel	Alpha				"255"				Spline	1.0	1.0
+	Animate		DarHudVersionLabel	Position			"r160	23"			Spline	1.0	1.0
+	
+	Animate		LogoContainer		Alpha				"255"				Spline	0.0	1.0
+	
+	Animate		VerticalBG			Alpha				"255"				Linear	0.0	1.0
+	Animate		VerticalBG			Position			"c-300	0"			Spline	0.0	1.0
+	
+	Animate		VerticalBGLeft		Alpha				"255"				Linear	0.0	1.0
+	Animate		VerticalBGRight		Alpha				"255"				Linear	0.0	1.0
+	Animate		VanityPanel			Alpha				"255"				Spline	0.0	1.0
+	
+	SetVisible	FriendPanel			1	1.0
+	Animate		FriendPanel			Position			"c-300	r16"		Spline	1.0	1.0
+	
+	Animate		LinkPanel			Alpha				"255"				Spline	1.0	1.0
+	Animate		LinkPanel			Position			"r100	r38"		Spline	1.0	1.0
+}
+
+//==========================================================================================================================
+
+event ShowFriendList
+{
+	Animate	FriendPanel	Position	"c-300	r117"	Accel	0.0	0.1
+}
+
+event HideFriendList
+{
+	Animate	FriendPanel	Position	"c-300	r16"	Accel	0.0	0.1
+}
+
+event OnHideFriendList
+{
+	SetVisible  HideFriendListButton 0 0
+	SetVisible	ShowFriendListButton 1 0
+	SetVisible  OuterBackground 0 0.1
+	SetVisible  InnerBackground 0 0.1
+	SetVisible  FriendListBackground 0 0.1
+	SetVisible  SteamFriendsList 0 0.1
+}
+
+event OnShowFriendList
+{
+	SetVisible  OuterBackground 1 0
+	SetVisible  InnerBackground 1 0
+	SetVisible  FriendListBackground 1 0
+	SetVisible  SteamFriendsList 1 0
+	SetVisible  ShowFriendListButton 0 0
+	SetVisible  HideFriendListButton 1 0
+}
+
+//==========================================================================================================================
+
+event PrepareChallengeFadeIn
+{
+	Animate	BeatThisLabel			Alpha		"0"				Linear	0.0	0.0
+	Animate	ChallengeLabel			Alpha		"0"				Linear	0.0	0.0
+	Animate	ClassImage				Alpha		"0"				Linear	0.0	0.0
+	Animate	ClassImageFade			Alpha		"0"				Linear	0.0	0.0
+	
+	Animate	TotalProgressBar		Alpha		"0"				Linear	0.0	0.0
+	Animate	AchievementNameLabel	Alpha		"0"				Linear	0.0	0.0
+	Animate	AchievementDescLabel	Alpha		"0"				Linear	0.0	0.0
+	Animate	AchievementImage		Alpha		"0"				Linear	0.0	0.0
+	
+	Animate	BeatThisLabel			Position	"3 		13"		Linear	0.0	0.0
+	Animate	ChallengeLabel			Position	"3 		19"		Linear	0.0	0.0
+	Animate	ClassImage				Position	"205 	0"		Linear	0.0	0.0
+	Animate	ClassImageFade			Position	"205 	19"		Linear	0.0	0.0
+	
+	Animate	TotalProgressBar		Position	"0 		2"		Linear	0.0	0.0
+	Animate	AchievementNameLabel	Position	"27 	3"		Linear	0.0	0.0
+	Animate	AchievementDescLabel	Position	"27 	9"		Linear	0.0	0.0
+	Animate	AchievementImage		Position	"2 		4"		Linear	0.0	0.0
+}
+
+event ChallengeFadeOut
+{
+	Animate	BeatThisLabel			Alpha		"0"				Deaccel	0.0	0.4
+	Animate	ChallengeLabel			Alpha		"0"				Deaccel	0.0	0.4
+	Animate	ClassImage				Alpha		"0"				Deaccel	0.0	0.4
+	Animate	ClassImageFade			Alpha		"0"				Linear	0.4	0.0
+	
+	Animate	TotalProgressBar		Alpha		"0"				Deaccel	0.0	0.4
+	Animate	AchievementNameLabel	Alpha		"0"				Deaccel	0.0	0.4
+	Animate	AchievementDescLabel	Alpha		"0"				Deaccel	0.0	0.4
+	Animate	AchievementImage		Alpha		"0"				Deaccel	0.0	0.4
+	
+	Animate	BeatThisLabel			Position	"7 		13"		Deaccel	0.0	0.4
+	Animate	ChallengeLabel			Position	"7 		19"		Deaccel	0.0	0.4
+	Animate	ClassImage				Position	"209 	0"		Deaccel	0.0	0.4
+	Animate	ClassImageFade			Position	"209 	19"		Linear	0.4	0.0
+	
+	Animate	TotalProgressBar		Position	"4 		2"		Deaccel	0.0	0.4
+	Animate	AchievementNameLabel	Position	"31 	3"		Deaccel	0.0	0.4
+	Animate	AchievementDescLabel	Position	"31 	9"		Deaccel	0.0	0.4
+	Animate	AchievementImage		Position	"6 		4"		Deaccel	0.0	0.4
+}
+
+event ChallengeFadeIn
+{
+	Animate	BeatThisLabel			Alpha		"255"			Accel	0.0	0.4
+	Animate	ChallengeLabel			Alpha		"255"			Accel	0.0	0.4
+	Animate	ClassImage				Alpha		"255"			Accel	0.0	0.4
+	Animate	ClassImageFade			Alpha		"255"			Linear	0.0	0.0
+	
+	Animate	TotalProgressBar		Alpha		"255"			Accel	0.0	0.4
+	Animate	AchievementNameLabel	Alpha		"255"			Accel	0.0	0.4
+	Animate	AchievementDescLabel	Alpha		"255"			Accel	0.0	0.4
+	Animate	AchievementImage		Alpha		"255"			Accel	0.0	0.4
+	
+	Animate	BeatThisLabel			Position	"5 		13"		Accel	0.0	0.4
+	Animate	ChallengeLabel			Position	"5 		19"		Accel	0.0	0.4
+	Animate	ClassImage				Position	"207 	0"		Accel	0.0	0.4
+	Animate	ClassImageFade			Position	"207 	19"		Accel	0.0	0.4
+	
+	Animate	TotalProgressBar		Position	"2 		2"		Accel	0.0	0.4
+	Animate	AchievementNameLabel	Position	"29 	3"		Accel	0.0	0.4
+	Animate	AchievementDescLabel	Position	"29 	9"		Accel	0.0	0.4
+	Animate	AchievementImage		Position	"4 		4"		Accel	0.0	0.4
+}
+
+event ChallengeHoverFadeIn
+{
+	Animate	BeatThisLabel			Alpha	"255"				Accel	0.0	0.1
+	Animate	ChallengeLabel			Alpha	"255"				Accel	0.0	0.1
+	Animate	ClassImage				Alpha	"255"				Accel	0.0	0.1
+	Animate	ClassImageFade			Alpha	"255"				Linear	0.0	0.0
+	
+	Animate	TotalProgressBar		Alpha	"255"				Accel	0.0	0.1
+	Animate	AchievementNameLabel	Alpha	"255"				Accel	0.0	0.1
+	Animate	AchievementDescLabel	Alpha	"255"				Accel	0.0	0.1
+	Animate	AchievementImage		Alpha	"255"				Accel	0.0	0.1
+	
+	Animate	BeatThisLabel			Position	"5 		13"		Accel	0.0	0.1
+	Animate	ChallengeLabel			Position	"5 		19"		Accel	0.0	0.1
+	Animate	ClassImage				Position	"207 	0"		Accel	0.0	0.1
+	Animate	ClassImageFade			Position	"207 	19"		Accel	0.0	0.1
+	
+	Animate	TotalProgressBar		Position	"2 		2"		Accel	0.0	0.1
+	Animate	AchievementNameLabel	Position	"29 	3"		Accel	0.0	0.1
+	Animate	AchievementDescLabel	Position	"29 	9"		Accel	0.0	0.1
+	Animate	AchievementImage		Position	"4 		4"		Accel	0.0	0.1
+}
+
+//==========================================================================================================================
+
+event PulseOption1
+{
+	Animate Option1Background_Selected Alpha "255"	Linear	0.0	0.05
+	Animate Option1Background_Selected Alpha "64"	Deaccel	0.4	0.5
+}
+
+event PulseOption2
+{
+	Animate Option2Background_Selected Alpha "255"	Linear	0.0	0.05
+	Animate Option2Background_Selected Alpha "64"	Deaccel	0.4	0.5
+}
+
+event PulseOption3
+{
+	Animate Option3Background_Selected Alpha "255"	Linear	0.0	0.05
+	Animate Option3Background_Selected Alpha "64"	Deaccel	0.4	0.5
+}
+
+event PulseOption4
+{
+	Animate Option4Background_Selected Alpha "255"	Linear	0.0	0.05
+	Animate Option4Background_Selected Alpha "64"	Deaccel	0.4	0.5
+}
+
+event PulseOption5
+{
+	Animate Option5Background_Selected Alpha "255"	Linear	0.0	0.05
+	Animate Option5Background_Selected Alpha "64"	Deaccel	0.4	0.5
+}
+
+event HideVoteBackgrounds
+{
+	Animate Option1Background_Selected Alpha "0"	Linear	0.0	0.01
+	Animate Option2Background_Selected Alpha "0"	Linear	0.0	0.01
+	Animate Option3Background_Selected Alpha "0"	Linear	0.0	0.01
+	Animate Option4Background_Selected Alpha "0"	Linear	0.0	0.01
+	Animate Option5Background_Selected Alpha "0"	Linear	0.0	0.01
+}
