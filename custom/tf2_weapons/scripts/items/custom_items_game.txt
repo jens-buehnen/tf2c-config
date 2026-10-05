@@ -1070,6 +1070,11 @@
 					"attribute_class"	"set_weapon_mode"
 					"value"	"1"
 				}
+				"mult cloak meter regen rate"
+				{
+					"attribute_class"	"mult_cloak_meter_regen_rate"
+					"value"	"1.5"
+				}
 				"cloak consume rate decreased"
 				{
 					"attribute_class"	"mult_cloak_meter_consume_rate"
@@ -1079,11 +1084,6 @@
 				{
 					"attribute_class"	"cloak_consume_on_feign_death_activate"
 					"value"	"0.5"
-				}
-				"mult cloak meter regen rate"
-				{
-					"attribute_class"	"mult_cloak_meter_regen_rate"
-					"value"	"1.5"
 				}
 				"mod_cloak_no_regen_from_items"
 				{
