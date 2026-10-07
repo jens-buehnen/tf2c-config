@@ -466,6 +466,10 @@
 			"propername"	"0"
 			"act_as_wearable" "1"
 			"drop_type"	"none"
+			"tags"
+			{
+				"bots_cant_use"	"1"
+			}
 			"used_by_classes"
 			{
 				"demoman"	"1"
@@ -581,6 +585,10 @@
 			"image_inventory"	"backpack/weapons/c_models/c_claymore/c_claymore"
 			"model_player"	"models/weapons/c_models/c_claymore/c_claymore.mdl"
 			"attach_to_hands"	"1"
+			"tags"
+			{
+				"bots_cant_use"	"1"
+			}
 			"used_by_classes"
 			{
 				"demoman"	"1"
@@ -638,7 +646,6 @@
 			}
 			"mouse_pressed_sound"	"ui/item_knife_large_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
-			"xifier_class_remap"	"eyelander"
 		}
 		"210"
 		{
