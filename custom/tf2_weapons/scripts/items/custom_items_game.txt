@@ -986,6 +986,10 @@
 			"attach_to_hands"	"1"
 			"image_inventory"	"backpack/weapons/c_models/urinejar"
 			"model_player"	"models/weapons/c_models/urinejar.mdl"
+			"tags"
+			{
+				"bots_cant_use"	"1"
+			}
 			"used_by_classes"
 			{
 				"sniper"	"1"
