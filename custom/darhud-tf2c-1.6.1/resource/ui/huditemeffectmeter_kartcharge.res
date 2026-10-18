@@ -1,0 +1,103 @@
+#base "meters/_huditemeffectmeter_base.res"
+
+"Resource/UI/HudItemEffectMeter_KartCharge.res"
+{
+	"HudItemEffectMeter"
+	{
+		"xpos"			"c-60"
+		"ypos"			"r100"
+		
+		"wide"			"122"
+		"tall"			"38"
+	}
+	
+	"ItemEffectMeterBG"
+	{
+		"ypos"			"20"
+		
+		"tall"			"f22"
+	}
+
+	"ItemEffectMeterBGShadow"
+	{
+		"tall"			"f22"
+	}
+	
+	"ItemEffectMeterLabel"
+	{
+		"ypos"		"24"
+		"zpos"		"10"
+		
+		"wide"		"99"
+		
+		"labelText"	"#TF_KART"
+	}
+
+	"ItemEffectMeter"
+	{	
+		"wide"	"99"
+	}
+	
+	"ItemEffectMeterCount"
+	{
+		"controlname"			"CExLabel"
+		"fieldname"			"ItemEffectMeterCount"
+		
+		"xpos"				"0"
+		"ypos"				"0"
+		
+		"wide"				"120"
+		"tall"				"20"
+		
+		"labelText"			"%progresscount%"
+		"font"				"HudFontMediumBold"
+		"textAlignment"		"west"
+		"fgcolor"			"CounterValue"
+		
+		"dropshadow"			"1"
+		"dropshadow_offset"	"3"
+		
+		"visible"			"1"
+		"enabled"			"1"
+	}
+
+	"EmptyIcon"
+	{
+		"xpos"		"-2"
+		"ypos"		"18"
+		
+		"wide"		"20"
+		
+		"image"		"resource/svgs/meters/ico_battery_inactive.svg"
+	}
+	
+	"ChargingIcon"
+	{
+		"xpos"		"-2"
+		"ypos"		"18"
+		
+		"wide"		"20"
+		
+		"image"		"resource/svgs/meters/ico_battery_inactive.svg"
+	}
+	
+	"ActiveIcon"
+	{
+		"xpos"		"-2"
+		"ypos"		"18"
+		
+		"wide"		"20"
+		
+		"image"		"resource/svgs/meters/ico_battery_active_2.svg"
+	}
+	
+	"FullIcon"
+	{
+		"xpos"		"-2"
+		"ypos"		"18"
+		
+		"wide"		"20"
+		
+		"image"		"resource/svgs/meters/ico_battery_active.svg"
+	}
+}

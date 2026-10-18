@@ -1,0 +1,11 @@
+<svg id="ico_focus_inactive" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M 64,76 C 47.507577,76 16,64 16,64 c 0,0 30.911992,18 48,18 17.088008,0 48,-18 48,-18 0,0 -31.507577,12 -48,12 z"/>
+</svg>
