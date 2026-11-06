@@ -1,0 +1,54 @@
+//Choreo version 1
+actor "demoman"
+{
+	channel "audio"
+	{
+		event speak "Demoman.GoodJob01"
+		{
+			time 0.280702 1.34882
+			param "Demoman.GoodJob01"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event sequence "taunt03_v1"
+		{
+			time 0 4.5
+			param "taunt03"
+			fixedlength
+			
+		}
+		event speak "Player.Burp01"
+		{
+			time 3.859649 4.157155
+			param "Player.Burp01"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event expression "openJaw"
+		{
+			time 3.587719 4.587719
+			param "player\demo\emotion\emotion"
+			param2 "openJaw"
+			event_ramp
+			{
+				0.4727 0.98050004
+				0.7152 0.16864601
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

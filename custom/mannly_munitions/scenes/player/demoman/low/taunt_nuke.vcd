@@ -1,0 +1,367 @@
+//Choreo version 1
+actor "demo"
+{
+	channel "body"
+	{
+		event sequence "taunt_nuke"
+		{
+			time 0 11.033333
+			param "taunt_nuke"
+			fixedlength
+			
+		}
+	}
+	channel "audio"
+	{
+		event speak "taunt_demo_nuke_1_grenade_get"
+		{
+			time 0.525 0.754206
+			param "taunt_demo_nuke_1_grenade_get"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "taunt_demo_nuke_2_grenade_open"
+		{
+			time 1.575 2.023005
+			param "taunt_demo_nuke_2_grenade_open"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "spit"
+		{
+			time 2.258334 2.79881
+			param "taunt_demo_nuke_3_spit_lid"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "taunt_demo_nuke_4_pour"
+		{
+			time 2.825 4.989921
+			param "taunt_demo_nuke_4_pour"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "taunt_demo_nuke_5_grenade_drop"
+		{
+			time 4.933333 5.932925
+			param "taunt_demo_nuke_5_grenade_drop"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "taunt_demo_nuke_6_bottle_drop"
+		{
+			time 4.866667 6.049297
+			param "taunt_demo_nuke_6_bottle_drop"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "taunt_demo_nuke_7_spit"
+		{
+			time 6.066668 7.209525
+			param "taunt_demo_nuke_7_spit"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "demo_taunt_nuke_9_button"
+		{
+			time 8.291667 10.643957
+			param "demo_taunt_nuke_9_button"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "taunt_demo_nuke_8_explosion"
+		{
+			time 6.641666 9.141462
+			param "taunt_demo_nuke_8_explosion"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+	channel "face"
+	{
+		event flexanimation "DIALOG"
+		{
+			time 0 -1
+			param ""
+			
+		}
+		event expression "hh2"
+		{
+			time 1.041667 2.041667
+			param "player\demo\phonemes\phonemes_strong"
+			param2 "hh2"
+			event_ramp
+			{
+				0.1373 0.953046
+				0.7784 0.956968
+			}
+			
+		}
+		event expression "ae"
+		{
+			time 0.733333 1.733333
+			param "player\demo\phonemes\phonemes_strong"
+			param2 "ae"
+			event_ramp
+			{
+				0.2137 0.945202
+				0.4824 0.984422
+				0.8725 0.11766
+			}
+			
+		}
+		event expression "w"
+		{
+			time 2.108333 2.625
+			param "player\demo\phonemes\phonemes_strong"
+			param2 "w"
+			event_ramp
+			{
+				0.1353 0.976578
+				0.2931 0.984422
+			}
+			
+		}
+		event expression "r3"
+		{
+			time 2.683334 3.425
+			param "player\demo\phonemes\phonemes_strong"
+			param2 "r3"
+			event_ramp
+			{
+				0.2294 0.968734
+				0.4417 0.968734
+			}
+			
+		}
+		event expression "aa2"
+		{
+			time 3 4.558333
+			param "player\demo\phonemes\phonemes_strong"
+			param2 "aa2"
+			event_ramp
+			{
+				0.151 0.968734
+				1.1917 0.96481204
+			}
+			
+		}
+		event expression "aa2"
+		{
+			time 2.258333 2.766666
+			param "player\demo\phonemes\phonemes_strong"
+			param2 "aa2"
+			event_ramp
+			{
+				0.151 0.968734
+				0.3652 0.96481204
+			}
+			
+		}
+		event expression "openJaw"
+		{
+			time 3 4.55
+			param "player\demo\emotion\emotion"
+			param2 "openJaw"
+			event_ramp
+			{
+				0.7451 0.52947
+				1.0725 0.349058
+			}
+			
+		}
+		event expression "openJaw"
+		{
+			time 6.966666 8.166666
+			param "player\demo\emotion\emotion"
+			param2 "openJaw"
+			event_ramp
+			{
+				0.1941 0.858918
+				0.3549 0.78832203
+				0.4902 0.423576
+				0.7225 0.403966
+				0.9314 0.090206005
+			}
+			
+		}
+	}
+	channel "expression"
+	{
+		event expression "mad"
+		{
+			time 0.119048 3.465477
+			param "player\demo\emotion\emotion"
+			param2 "mad"
+			event_ramp
+			{
+				0.6471 0.96089
+				2.7015 0.968734
+			}
+			
+		}
+		event expression "madUpper"
+		{
+			time 5.572728 8.165153
+			param "player\demo\emotion\emotion"
+			param2 "madUpper"
+			event_ramp
+			{
+				0.4294 0.45887402
+				0.8489 0.81969804
+				1.4453 1.00011
+				1.7731 0.909904
+			}
+			
+		}
+		event expression "madUpper"
+		{
+			time 2.951515 4.509849
+			param "player\demo\emotion\emotion"
+			param2 "madUpper"
+			event_ramp
+			{
+				0.2471 0.968734
+				1.2465 0.98050004
+			}
+			
+		}
+		event expression "evilHappy"
+		{
+			time 7.491667 10.491668
+			param "player\demo\emotion\emotion"
+			param2 "evilHappy"
+			event_ramp
+			{
+				0.6882 0.584378
+				2.2696 0.870684
+			}
+			
+		}
+		event expression "mad"
+		{
+			time 2.966667 6.016667
+			param "player\demo\emotion\emotion"
+			param2 "mad"
+			event_ramp
+			{
+				0.2804 0.219632
+				1.2961 0.894216
+				2.5662 0.976578
+			}
+			
+		}
+		event expression "w"
+		{
+			time 5.908333 7.141668
+			param "player\demo\phonemes\phonemes_strong"
+			param2 "w"
+			event_ramp
+			{
+				0.2941 0.96481204
+				1.0333 0.93343604
+			}
+			
+		}
+		event expression "dead"
+		{
+			time 7.033334 8.566666
+			param "player\demo\emotion\emotion"
+			param2 "dead"
+			event_ramp
+			{
+				0.1784 0.988344
+				1.3 0.96481204
+			}
+			
+		}
+		event expression "happyUpper"
+		{
+			time 8.216668 10.55
+			param "player\demo\emotion\emotion"
+			param2 "happyUpper"
+			event_ramp
+			{
+				0.0804 0.03922
+				0.1843 0.207866
+				0.2706 0.670662
+				0.4137 0.635364
+				0.5314 0.227476
+				0.7804 0.211788
+				1.351 0.192178
+				1.4373 0.45887402
+				1.6 0.517704
+				1.7118 0.537314
+				1.9824 0.54908
+			}
+			
+		}
+		event expression "happyUpper"
+		{
+			time 1.75 2.425
+			param "player\demo\emotion\emotion"
+			param2 "happyUpper"
+			event_ramp
+			{
+				0.1373 0.49809402
+				0.4863 0.556924
+			}
+			
+		}
+		event expression "happyUpper"
+		{
+			time 3.108333 4.608333
+			param "player\demo\emotion\emotion"
+			param2 "happyUpper"
+			event_ramp
+			{
+				0.4843 0.251008
+				0.9725 0.556924
+				1.2525 0.396122
+				1.4314 0.164724
+			}
+			
+		}
+		event expression "happyUpper"
+		{
+			time 5.724999 6.4
+			param "player\demo\emotion\emotion"
+			param2 "happyUpper"
+			event_ramp
+			{
+				0.1373 0.349058
+				0.2667 0.584378
+				0.4863 0.556924
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

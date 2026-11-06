@@ -1,0 +1,1 @@
+If you wish to use any of these alts, move the desired svg into the deathnotice folder and name it after the folder it was originally placed in.

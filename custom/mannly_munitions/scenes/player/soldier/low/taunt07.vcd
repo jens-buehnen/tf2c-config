@@ -1,0 +1,86 @@
+//Choreo version 1
+actor "soldier"
+{
+	channel "body"
+	{
+		event sequence "taunt07"
+		{
+			time 0 2.933333
+			param "taunt07"
+			fixedlength
+			
+		}
+		event expression "mad"
+		{
+			time 0.006173 0.646173
+			param "player\soldier\emotion\emotion"
+			param2 "mad"
+			event_ramp
+			{
+				0 0.760868
+				0.4706 0.709882
+			}
+			
+		}
+		event expression "mad"
+		{
+			time 2.376544 2.933
+			param "player\soldier\emotion\emotion"
+			param2 "mad"
+			event_ramp
+			{
+				0 0.011766
+				0.1324 0.69027203
+				0.5515 0.713804
+			}
+			
+		}
+		event expression "aa2"
+		{
+			time 0.6 2.265
+			param "player\soldier\phonemes\phonemes_strong"
+			param2 "aa2"
+			event_ramp
+			{
+				0.002 0.007844
+				0.1224 0.956968
+				0.2745 0.69027203
+				0.4224 0.99618804
+				0.5507 0.564768
+				0.6716 0.992266
+				0.7343 0.69027203
+				0.8493 0.945202
+				0.9239 0.717726
+				0.9328 0.611832
+				1.0433 0.937358
+				1.2059 0.776556
+				1.5235 0.007844
+			}
+			
+		}
+		event expression "specialAction01"
+		{
+			time 0.532 2.442
+			param "player\soldier\emotion\emotion"
+			param2 "specialAction01"
+			event_ramp
+			{
+				0.003 0.011766
+				0.103 0.992266
+				1.7448 0.992266
+				1.909 0.011766
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

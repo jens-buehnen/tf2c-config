@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture"		"backpack/workshop_partner/weapons/c_models/c_prinny_knife/c_prinny_knife_large"
+	"$translucent"		"1"
+	"$vertexcolor"		"1"
+	"$ignorez"	"1"
+}

@@ -1,0 +1,92 @@
+//Choreo version 1
+event loop "congaLoop"
+{
+	time 11.487517 -1
+	param "0.000000"
+	loopcount 255
+	
+}
+actor "Heavy"
+{
+	channel "body"
+	{
+		event sequence "iiii"
+		{
+			time 0 11.488511
+			param "taunt_conga"
+			fixedlength
+			
+		}
+	}
+	channel "kjojmnok"
+	{
+		event expression "happySmall"
+		{
+			time 0 2.739999
+			param "player\sniper\emotion\emotion"
+			param2 "happySmall"
+			
+		}
+		event expression "HappySmallClosed"
+		{
+			time 4.6 7.939999
+			param "player\sniper\emotion\emotion"
+			param2 "HappySmallClosed"
+			
+		}
+	}
+	channel "voice"
+	{
+		event expression "happyBig"
+		{
+			time 2.68 4.82
+			param "player\sniper\emotion\emotion"
+			param2 "happyBig"
+			
+		}
+		event expression "happySmall"
+		{
+			time 7.873334 11.486668
+			param "player\sniper\emotion\emotion"
+			param2 "happySmall"
+			
+		}
+		event speak "snipes_taunt_conga_random_fun1"
+		{
+			time 0.06 3.238549
+			param "snipes_taunt_conga_random_fun1"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "snipes_taunt_conga_random_fun2"
+		{
+			time 5.566666 6.762358
+			param "snipes_taunt_conga_random_fun2"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "snipes_taunt_conga_random_fun3"
+		{
+			time 8.87333 10.619226
+			param "snipes_taunt_conga_random_fun3"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

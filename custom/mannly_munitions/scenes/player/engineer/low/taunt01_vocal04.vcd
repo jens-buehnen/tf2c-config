@@ -1,0 +1,66 @@
+//Choreo version 1
+actor "Engineer"
+{
+	channel "audio"
+	{
+		event speak "Engineer.BattleCry07"
+		{
+			time 0.371795 2.86794
+			param "Engineer.BattleCry07"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event sequence "taunt01"
+		{
+			time 0 4.565217
+			param "taunt01"
+			fixedlength
+			
+		}
+	}
+	channel "emotion"
+	{
+		event expression "happyBigUpper"
+		{
+			time 0.053686 3.100962
+			param "player\engineer\emotion\emotion"
+			param2 "happyBigUpper"
+			event_ramp
+			{
+				0.2121 0.976578
+				2.7692 1.00011
+			}
+			
+		}
+		event expression "happyBigClosed"
+		{
+			time 0.486378 4.340545
+			param "player\engineer\emotion\emotion"
+			param2 "happyBigClosed"
+			event_ramp
+			{
+				0.3576 0.309838
+				0.8394 0.325526
+				1.1455 0.105894
+				2.3925 0.105894
+				2.5278 0.658896
+				2.638 0.25493
+				2.9628 0.329448
+				3.2533 0.66674
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

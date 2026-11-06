@@ -1,0 +1,99 @@
+//Choreo version 1
+event stoppoint "end"
+{
+	time 4.934916 -1
+	param "noaction"
+	
+}
+actor "scout"
+{
+	channel "animation"
+	{
+		event sequence "taunt_laugh"
+		{
+			time 0 4.933333
+			param "taunt_laugh"
+			fixedlength
+			
+		}
+		event speak "d"
+		{
+			time 0 4.771701
+			param "Scout.LaughLong02"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event expression "happyBig"
+		{
+			time 0.002415 4.925121
+			param "player\scout\emotion\emotion"
+			param2 "happyBig"
+			event_ramp
+			{
+				0.0867 1.00011
+				4.87 1.00011
+			}
+			
+		}
+		event expression "aa2"
+		{
+			time 0.004831 4.939613
+			param "player\scout\phonemes\phonemes_strong"
+			param2 "aa2"
+			event_ramp
+			{
+				0.3967 0.011766
+				0.5733 0.811854
+				0.72 0
+				0.8467 0.94912404
+				0.9167 0.027454
+				1.62 0
+				1.76 0.82362
+				1.8167 0
+				1.8733 0.007844
+				2 0.913826
+				2.0833 0
+				4.05 0.007844
+				4.2333 0.66674
+				4.3833 0.011766
+			}
+			
+		}
+		event expression "happyBigUpper"
+		{
+			time 0.108696 4.847826
+			param "player\scout\emotion\emotion"
+			param2 "happyBigUpper"
+			event_ramp
+			{
+				0.0033 0
+				0.1833 0
+				0.34 0.415732
+				0.3767 0
+				0.5133 0
+				0.5967 0.349058
+				0.6367 0
+				0.8433 0
+				1.0933 0.741258
+				1.31 0
+				2.3733 0
+				2.6267 0.423576
+				3.12 0
+				4.7391 0
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

@@ -1,0 +1,60 @@
+//Choreo version 1
+actor "spy"
+{
+	channel "body"
+	{
+		event sequence "taunt05"
+		{
+			time 0 2.466667
+			param "taunt05"
+			fixedlength
+			
+		}
+		event expression "happySmall"
+		{
+			time 0 0.323529
+			param "player\spy\emotion\emotion"
+			param2 "happySmall"
+			event_ramp
+			{
+				0.0283 1.00011
+				0.2929 1.00011
+			}
+			
+		}
+		event expression "scaredUpper"
+		{
+			time 0.297386 0.5
+			param "player\spy\emotion\emotion"
+			param2 "scaredUpper"
+			event_ramp
+			{
+				0.0174 1.00011
+				0.1735 1.00011
+			}
+			
+		}
+		event expression "Smile01"
+		{
+			time 0.48366 2.46732
+			param "player\spy\emotion\emotion"
+			param2 "Smile01"
+			event_ramp
+			{
+				0.0613 0.976578
+				1.9 0.984422
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

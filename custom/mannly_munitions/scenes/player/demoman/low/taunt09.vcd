@@ -1,0 +1,48 @@
+//Choreo version 1
+actor "demoman"
+{
+	channel "taunt_action"
+	{
+		event sequence "taunt09"
+		{
+			time 0 4.800001
+			param "taunt09"
+			fixedlength
+			
+		}
+		event expression "evilHappy"
+		{
+			time -0.008772 2.587719
+			param "player\demo\emotion\emotion"
+			param2 "evilHappy"
+			event_ramp
+			{
+				0.297 0.3922
+				2.0113 0.356902
+			}
+			
+		}
+		event expression "madUpper"
+		{
+			time 1.517544 4.77193
+			param "player\demo\emotion\emotion"
+			param2 "madUpper"
+			event_ramp
+			{
+				0.2273 0.635364
+				2.8907 0.741258
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

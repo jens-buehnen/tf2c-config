@@ -1,0 +1,48 @@
+//Choreo version 1
+actor "demo"
+{
+	channel "body"
+	{
+		event sequence "taunt06"
+		{
+			time 0 2.5
+			param "taunt06"
+			fixedlength
+			
+		}
+		event expression "happy"
+		{
+			time 0 2.5
+			param "player\demo\emotion\emotion"
+			param2 "happy"
+			event_ramp
+			{
+				0.1708 1.00011
+				2.3958 1.00011
+			}
+			
+		}
+		event expression "aa"
+		{
+			time 0 2.5
+			param "player\demo\phonemes\phonemes_strong"
+			param2 "aa"
+			event_ramp
+			{
+				0.1708 0.47064
+				2.4688 0.407888
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

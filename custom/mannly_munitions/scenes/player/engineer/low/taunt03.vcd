@@ -1,0 +1,51 @@
+//Choreo version 1
+actor "Engineer"
+{
+	channel "body"
+	{
+		event sequence "taunt03"
+		{
+			time 0 4.566667
+			param "taunt03"
+			fixedlength
+			
+		}
+		event speak "Engineer.LaughLong01"
+		{
+			time 0 4.620771
+			param "Engineer.LaughLong01"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event expression "happyBig"
+		{
+			time 0.030864 4.617284
+			param "player\engineer\emotion\emotion"
+			param2 "happyBig"
+			event_ramp
+			{
+				0.022 0.858918
+				0.5738 0.898138
+				0.9087 0.658896
+				1.3503 0.651052
+				1.8885 0.85107404
+				2.64 0.49025002
+				3.4133 0.827542
+				4.3667 0.937358
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

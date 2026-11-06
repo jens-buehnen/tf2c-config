@@ -1,0 +1,101 @@
+//Choreo version 1
+actor "soldier"
+{
+	channel "body"
+	{
+		event sequence "taunt04"
+		{
+			time -0.025641 4.841026
+			param "taunt04"
+			fixedlength
+			
+		}
+		event speak "soldier_ch"
+		{
+			time 2.961538 4.073194
+			param "Soldier.Cheers05"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event expression "defaultFaceUpper"
+		{
+			time 0.01282 1.01282
+			param "player\soldier\emotion\emotion"
+			param2 "defaultFaceUpper"
+			
+		}
+		event expression "b"
+		{
+			time 2.74359 2.979
+			param "player\soldier\phonemes\phonemes_weak"
+			param2 "b"
+			
+		}
+		event expression "uw"
+		{
+			time 2.929487 3.28
+			param "player\soldier\phonemes\phonemes_strong"
+			param2 "uw"
+			event_ramp
+			{
+				0.0627 0.890294
+				0.1851 0.878528
+				0.2955 0.031376
+				0.3478 0.003922
+			}
+			
+		}
+		event expression "er2"
+		{
+			time 3.211539 3.408
+			param "player\soldier\phonemes\phonemes"
+			param2 "er2"
+			event_ramp
+			{
+				0.0284 0.800088
+				0.1448 0.800088
+			}
+			
+		}
+		event expression "ah"
+		{
+			time 3.346154 4.432
+			param "player\soldier\phonemes\phonemes"
+			param2 "ah"
+			event_ramp
+			{
+				0.5119 0.925592
+				0.6597 0.94912404
+				0.8396 0.611832
+				0.9724 0.533392
+			}
+			
+		}
+		event expression "defaultFaceUpper"
+		{
+			time 4.221 5.5
+			param "player\soldier\emotion\emotion"
+			param2 "defaultFaceUpper"
+			event_ramp
+			{
+				0.003 0.007844
+				0.1015 0.741258
+				0.2343 0.870684
+				1.1463 0.815776
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

@@ -1,0 +1,38 @@
+//Choreo version 1
+actor "sniper"
+{
+	channel "body"
+	{
+		event sequence "taunt06"
+		{
+			time 0 2.5
+			param "taunt06"
+			fixedlength
+			
+		}
+		event expression "Aggressive"
+		{
+			time 0 2.5
+			param "player\sniper\emotion\emotion"
+			param2 "Aggressive"
+			event_ramp
+			{
+				0.1585 0.847152
+				0.3098 1.00011
+				2.2854 1.00011
+				2.4098 0.83538604
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

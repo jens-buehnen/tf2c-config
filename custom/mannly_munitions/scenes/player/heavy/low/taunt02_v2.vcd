@@ -1,0 +1,67 @@
+//Choreo version 1
+actor "Heavy"
+{
+	channel "audio"
+	{
+		event speak "Heavy.Taunts01"
+		{
+			time 1.966667 3.963583
+			param "Heavy.Taunts01"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event sequence "taunt02_v2"
+		{
+			time 0 4.5
+			param "taunt02"
+			fixedlength
+			
+		}
+	}
+	channel "emotion"
+	{
+		event expression "upperAngry2"
+		{
+			time 1.93 4.233334
+			param "player\heavy\emotion\emotion"
+			param2 "upperAngry2"
+			event_ramp
+			{
+				0.2061 0.98050004
+				0.3818 0.57653403
+				0.6939 0.533392
+				1.0848 0.388278
+				1.3818 0.34513602
+				1.4758 0.427498
+				1.5939 0.98050004
+				1.7697 0.643208
+				2.1485 0.59222203
+			}
+			
+		}
+		event expression "idleface"
+		{
+			time 0.005952 2.077381
+			param "player\heavy\emotion\emotion"
+			param2 "idleface"
+			event_ramp
+			{
+				0 1.00011
+				1.8667 0.99618804
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

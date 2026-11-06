@@ -1,0 +1,102 @@
+//Choreo version 1
+event stoppoint "end"
+{
+	time 4.831051 -1
+	param "noaction"
+	
+}
+actor "medic"
+{
+	channel "animation"
+	{
+		event sequence "pyro_taunt_replay"
+		{
+			time 0 4.833333
+			param "taunt_laugh"
+			fixedlength
+			
+		}
+	}
+	channel "audio"
+	{
+		event speak "me"
+		{
+			time 0.33 4.091633
+			param "Medic.LaughLong01"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event expression "happyFull"
+		{
+			time 0.018265 4.819634
+			param "player\medic\emotion\emotion"
+			param2 "happyFull"
+			event_ramp
+			{
+				0.47 0.99618804
+				4.69 1.00011
+			}
+			
+		}
+		event expression "ax2"
+		{
+			time 0.593607 4.732877
+			param "player\medic\phonemes\phonemes_strong"
+			param2 "ax2"
+			event_ramp
+			{
+				0.1 0.603988
+				0.2367 0.023532
+				0.2933 0.541236
+				0.4733 0.521626
+				0.5567 0.760868
+				0.6367 0.36866802
+				0.7267 0.76479
+				0.8533 0.36866802
+				0.97 0.59222203
+				1.04 0.301994
+				1.17 0.68635
+				1.2 0.537314
+				1.2967 0.64713
+				1.3833 0.109816
+				1.47 0.59222203
+				1.5333 0.447108
+				1.6467 0.537314
+				1.7533 0.094128
+				1.9267 0.447108
+				1.95 0.376512
+				2.1767 0.286306
+				2.2267 0
+				2.52 0.384356
+				2.56 0.03922
+				2.72 0.321604
+				2.98 0.074518
+			}
+			
+		}
+		event expression "evilHappy"
+		{
+			time 0.924657 2.194064
+			param "player\medic\emotion\emotion"
+			param2 "evilHappy"
+			event_ramp
+			{
+				0.0967 0.164724
+				1.03 0.109816
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

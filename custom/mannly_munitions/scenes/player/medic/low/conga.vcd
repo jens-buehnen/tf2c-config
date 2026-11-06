@@ -1,0 +1,111 @@
+//Choreo version 1
+event loop "congaLoop"
+{
+	time 11.487517 -1
+	param "0.000000"
+	loopcount 255
+	
+}
+actor "Heavy"
+{
+	channel "body"
+	{
+		event sequence "iiii"
+		{
+			time 0 11.488511
+			param "taunt_conga"
+			fixedlength
+			
+		}
+	}
+	channel "kjojmnok"
+	{
+		event expression "happy"
+		{
+			time 0.006667 4.493334
+			param "player\medic\emotion\emotion"
+			param2 "happy"
+			event_ramp
+			{
+				0.012 0.92167
+				3.674 0.800088
+			}
+			
+		}
+		event expression "happy"
+		{
+			time 9.699999 11.493332
+			param "player\medic\emotion\emotion"
+			param2 "happy"
+			
+		}
+		event expression "happyFull"
+		{
+			time 6.226667 9.853334
+			param "player\medic\emotion\emotion"
+			param2 "happyFull"
+			event_ramp
+			{
+				0.588 0.84323
+				3.052 0.83538604
+			}
+			
+		}
+		event expression "default"
+		{
+			time 4.2 6.393333
+			param "player\medic\emotion\emotion"
+			param2 "default"
+			
+		}
+	}
+	channel "voice"
+	{
+		event speak "medic_taunt_conga_random_fun1"
+		{
+			time 0.046667 0.756349
+			param "medic_taunt_conga_random_fun1"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "medic_taunt_conga_random_fun2"
+		{
+			time 2.646667 3.735351
+			param "medic_taunt_conga_random_fun2"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "medic_taunt_conga_random_fun3"
+		{
+			time 6.12 7.596576
+			param "medic_taunt_conga_random_fun3"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "medic_taunt_conga_random_fun2"
+		{
+			time 8.52 9.44424
+			param "medic_taunt_conga_random_fun2"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

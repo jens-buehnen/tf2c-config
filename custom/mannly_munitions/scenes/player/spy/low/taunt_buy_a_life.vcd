@@ -1,0 +1,72 @@
+//Choreo version 1
+actor "spy"
+{
+	channel "taunt"
+	{
+		event sequence "taunt_buy_a_life"
+		{
+			time 0.007246 6.373913
+			param "taunt_buy_a_life"
+			fixedlength
+			
+		}
+	}
+	channel "sound"
+	{
+		event speak "spy_taunt_buyalife_1_speech"
+		{
+			time 0.586956 3.284348
+			param "spy_taunt_buyalife_1_speech"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "spy_taunt_buyalife_3_bill_throw"
+		{
+			time 4.127193 4.938304
+			param "spy_taunt_buyalife_3_bill_throw"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+	channel "flex"
+	{
+	}
+	channel "expression"
+	{
+		event expression "specialAction01Upper"
+		{
+			time -0.021739 6.670099
+			param "player\spy\emotion\emotion"
+			param2 "specialAction01Upper"
+			event_ramp
+			{
+				0.0604 0.101972
+				0.3625 0.57653403
+				0.7646 0.423576
+				1.0521 0.082362
+				1.5298 0.415732
+				2.0529 0.54908
+				3.7059 0.403966
+				4.2588 0.133348
+				5.4118 0.45103002
+				5.801 0.505938
+				6.1843 0.502016
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

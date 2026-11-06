@@ -1,0 +1,50 @@
+//Choreo version 1
+actor "sniper"
+{
+	channel "body"
+	{
+		event sequence "taunt02"
+		{
+			time 0 2.7
+			param "taunt02"
+			fixedlength
+			
+		}
+		event speak "Sniper.BattleCry05"
+		{
+			time 0.623456 2.597152
+			param "Sniper.BattleCry05"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event expression "specialAction01"
+		{
+			time 0.030864 2.679012
+			param "player\sniper\emotion\emotion"
+			param2 "specialAction01"
+			event_ramp
+			{
+				0.044 0.890294
+				0.5379 0.780478
+				0.7621 0.129426
+				1.3759 0.709882
+				1.9621 0.298072
+				2.2862 0.811854
+				2.5897 0.839308
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

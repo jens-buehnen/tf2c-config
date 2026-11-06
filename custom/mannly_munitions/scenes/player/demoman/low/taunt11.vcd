@@ -1,0 +1,68 @@
+//Choreo version 1
+actor "demo"
+{
+	channel "body"
+	{
+		event sequence "taunt11_Howl"
+		{
+			time 0 5.5
+			param "taunt11_Howl"
+			fixedlength
+			
+		}
+	}
+	channel "wav"
+	{
+		event speak "halloween.wolf_01"
+		{
+			time 0.333 5.225517
+			param "halloween.wolf_01"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event expression "defaultFace"
+		{
+			time 0.028736 5.478735
+			param "player\demo\emotion\emotion"
+			param2 "defaultFace"
+			event_ramp
+			{
+				0.1556 1.00011
+				5.1944 1.00011
+			}
+			
+		}
+		event expression "ae"
+		{
+			time 0.275862 5.287356
+			param "player\demo\phonemes\phonemes"
+			param2 "ae"
+			event_ramp
+			{
+				0.0667 0.086284004
+				0.1444 0.94912404
+				0.2778 0.247086
+				0.3778 0.925592
+				0.5 0.219632
+				0.6222 0.909904
+				0.8 0.141192
+				1.1 0.890294
+				1.3167 0.654974
+				4.5111 0.631442
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

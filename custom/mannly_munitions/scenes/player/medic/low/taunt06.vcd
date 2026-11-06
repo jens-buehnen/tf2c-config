@@ -1,0 +1,135 @@
+//Choreo version 1
+actor "medic"
+{
+	channel "animation"
+	{
+		event sequence "taunt06"
+		{
+			time 0 4
+			param "taunt06"
+			fixedlength
+			
+		}
+		event expression "default"
+		{
+			time 0.006667 0.319592
+			param "player\medic\emotion\emotion"
+			param2 "default"
+			event_ramp
+			{
+				0.066 0.992266
+				0.2605 1.00011
+				0.3085 0
+			}
+			
+		}
+		event expression "yellingUpper"
+		{
+			time 0.272109 1.272109
+			param "player\medic\emotion\emotion"
+			param2 "yellingUpper"
+			event_ramp
+			{
+				0.074 0.78832203
+				0.926 0.772634
+			}
+			
+		}
+		event expression "happy"
+		{
+			time 2.112245 3.190476
+			param "player\medic\emotion\emotion"
+			param2 "happy"
+			event_ramp
+			{
+				0.278 0.988344
+				1.0042 0.992266
+			}
+			
+		}
+		event expression "jawOpen"
+		{
+			time 1.214285 2.32653
+			param "player\medic\emotion\emotion"
+			param2 "jawOpen"
+			event_ramp
+			{
+				0.144 0.572612
+				0.512 0.800088
+				0.978 0.11766
+			}
+			
+		}
+		event expression "happyFull"
+		{
+			time 1.210884 2.323129
+			param "player\medic\emotion\emotion"
+			param2 "yellingUpper"
+			event_ramp
+			{
+				0.144 1.00011
+				0.89 0.988344
+			}
+			
+		}
+		event expression "w"
+		{
+			time 1.204082 2.204082
+			param "player\medic\phonemes\phonemes"
+			param2 "w"
+			event_ramp
+			{
+				0.094 0.776556
+				0.454 0.164724
+				0.77 0.839308
+			}
+			
+		}
+		event expression "mad"
+		{
+			time 3.139456 3.836735
+			param "player\medic\emotion\emotion"
+			param2 "mad"
+			event_ramp
+			{
+				0.158 0.796166
+				0.554 0.76479
+			}
+			
+		}
+		event expression "zh"
+		{
+			time 2.122449 3.183674
+			param "player\medic\phonemes\phonemes_strong"
+			param2 "zh"
+			event_ramp
+			{
+				0.296 0.992266
+				0.9392 1.00011
+			}
+			
+		}
+	}
+	channel "audio"
+	{
+		event speak "Medic.Taunts16"
+		{
+			time 0.006173 3.469665
+			param "Medic.Taunts16"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

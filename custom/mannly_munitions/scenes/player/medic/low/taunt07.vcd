@@ -1,0 +1,54 @@
+//Choreo version 1
+actor "medic"
+{
+	channel "body"
+	{
+		event sequence "taunt07"
+		{
+			time 0 2.5
+			param "taunt07"
+			fixedlength
+			
+		}
+		event expression "scaredHurt"
+		{
+			time 0 2.5
+			param "player\medic\emotion\emotion"
+			param2 "yellingUpper"
+			event_ramp
+			{
+				0.1967 0.760868
+				0.2433 0.909904
+				0.36 0.929514
+				2.2433 0.90206003
+				2.3733 0.878528
+				2.42 0.76479
+			}
+			
+		}
+		event expression "uw"
+		{
+			time 0 2.5
+			param "player\medic\phonemes\phonemes_strong"
+			param2 "uw"
+			event_ramp
+			{
+				0.1353 0.858918
+				0.2265 0.913826
+				2.2618 0.88245
+				2.4088 0.831464
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

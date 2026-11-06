@@ -1,0 +1,38 @@
+//Choreo version 1
+actor "medic"
+{
+	channel "body"
+	{
+		event sequence "taunt_melee"
+		{
+			time 0 4
+			param "taunt03"
+			fixedlength
+			
+		}
+		event expression "pain"
+		{
+			time 0.049383 3.969136
+			param "player\medic\emotion\emotion"
+			param2 "pain"
+			event_ramp
+			{
+				0.1947 0.760868
+				1.4917 0.584378
+				2.1167 0.925592
+				3.5833 0.713804
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 { fill: #b33b3b; }
+    </style>
+  </defs>
+  <g transform="matrix(1.2866477,0,0,1.2866477,-5.7872343,-5.7872343)">
+    <path class="cls-1" d="M 4.4979167,4.4979167 H 10.847917 L 18.520833,16.933333 10.847917,29.36875 H 4.4979167 L 12.435417,16.933333 Z"/>
+    <path class="cls-1" d="m 15.345833,4.4979167 h 6.35 L 29.368749,16.933333 21.695833,29.36875 h -6.35 l 7.9375,-12.435417 z"/>
+  </g>
+</svg>

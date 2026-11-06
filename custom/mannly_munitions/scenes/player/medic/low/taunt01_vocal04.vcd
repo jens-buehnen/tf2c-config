@@ -1,0 +1,64 @@
+//Choreo version 1
+actor "medic"
+{
+	channel "body"
+	{
+		event sequence "taunt01"
+		{
+			time 0 4
+			param "taunt01"
+			fixedlength
+			
+		}
+		event expression "scared"
+		{
+			time 0.024691 1.808642
+			param "player\medic\emotion\emotion"
+			param2 "scared"
+			event_ramp
+			{
+				0.0797 0.505938
+				0.6963 0.478484
+				1.4173 0.49809402
+				1.5353 0.066674
+			}
+			
+		}
+		event expression "madFull"
+		{
+			time 1.395062 3.944444
+			param "player\medic\emotion\emotion"
+			param2 "madFull"
+			event_ramp
+			{
+				0.0511 0.09805
+				0.163 0.56084603
+				1.1926 0.639286
+				2.3679 0.713804
+			}
+			
+		}
+	}
+	channel "audio"
+	{
+		event speak "Medic.AutoCappedControlPoint01"
+		{
+			time 0 3.018594
+			param "Medic.SpecialCompleted01"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$baseTexture" "backpack/weapons/c_models/c_passtime_jack/c_passtime_jack_large"
+	$translucent 1
+	$vertexcolor 1
+	"$ignorez"	"1"
+}

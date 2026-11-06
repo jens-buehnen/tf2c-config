@@ -1,0 +1,120 @@
+//Choreo version 1
+actor "demo"
+{
+	channel "body"
+	{
+		event sequence "taunt04"
+		{
+			time 0 5
+			param "taunt04"
+			fixedlength
+			
+		}
+		event expression "silence"
+		{
+			time 0 1
+			param "player\demo\emotion\emotion"
+			param2 "silence"
+			event_ramp
+			{
+				0.2172 0.62752
+				0.8034 0.631442
+			}
+			
+		}
+		event expression "happy"
+		{
+			time 2 3
+			param "player\demo\emotion\emotion"
+			param2 "happy"
+			event_ramp
+			{
+				0.0542 0.113738
+				0.26 0.93343604
+				0.3462 1.00011
+				0.7512 1.00011
+			}
+			
+		}
+		event expression "evilHappy"
+		{
+			time 2.845238 3.845238
+			param "player\demo\emotion\emotion"
+			param2 "evilHappy"
+			event_ramp
+			{
+				0.0615 0.768712
+				0.0914 0.88245
+				0.16 0.968734
+				0.2496 1.00011
+				0.6519 1.00011
+				0.8019 1.00011
+			}
+			
+		}
+		event expression "madUpper"
+		{
+			time 0.827381 2.2
+			param "player\demo\emotion\emotion"
+			param2 "madUpper"
+			event_ramp
+			{
+				0.1363 0.46671802
+				1.145 0.443186
+			}
+			
+		}
+		event expression "mad"
+		{
+			time 3.777778 4.316667
+			param "player\demo\emotion\emotion"
+			param2 "mad"
+			event_ramp
+			{
+				0.0771 0.717726
+				0.4514 0.815776
+			}
+			
+		}
+		event expression "ax"
+		{
+			time 2.002222 3.002222
+			param "player\demo\phonemes\phonemes_strong"
+			param2 "ax"
+			event_ramp
+			{
+				0.07 0.023532
+				0.1607 0.031376
+				0.1726 0.074518
+				0.24 0.654974
+				0.47 0.670662
+				0.675 0.651052
+				0.8024 0.513782
+				0.895 0
+			}
+			
+		}
+	}
+	channel "audio"
+	{
+		event speak "Demoman.Taunts13"
+		{
+			time 0 3.877733
+			param "Demoman.Taunts13"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

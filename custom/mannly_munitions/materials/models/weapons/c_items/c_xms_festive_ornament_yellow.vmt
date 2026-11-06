@@ -1,0 +1,9 @@
+"Patch"
+{
+	include "materials/models/weapons/c_items/c_xms_festive_ornament_blue.vmt"
+	
+	insert
+	{
+	"$baseTexture" "models/weapons/c_items/c_xms_festive_ornament_yellow"
+	}
+}

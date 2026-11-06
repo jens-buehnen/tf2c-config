@@ -1,0 +1,73 @@
+//Choreo version 1
+actor "Heavy"
+{
+	channel "audio"
+	{
+		event speak "Heavy.GoodJob03"
+		{
+			time 2.568182 3.996209
+			param "Heavy.GoodJob03"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event sequence "taunt01_v2"
+		{
+			time 0 5.133333
+			param "taunt01"
+			fixedlength
+			playoverscript
+			
+		}
+	}
+	channel "emotion"
+	{
+		event expression "upperSuprise1"
+		{
+			time 0.07623 3.45973
+			param "player\heavy\emotion\emotion"
+			param2 "upperSuprise1"
+			event_ramp
+			{
+				0.1939 0.85107404
+				3.2475 0.776556
+			}
+			
+		}
+		event expression "upperHappy2"
+		{
+			time 3.350348 4.046343
+			param "player\heavy\emotion\emotion"
+			param2 "upperHappy2"
+			event_ramp
+			{
+				0.2273 0.56869
+				0.5399 0.56869
+			}
+			
+		}
+		event expression "happy1"
+		{
+			time 3.823959 5.117878
+			param "player\heavy\emotion\emotion"
+			param2 "happy1"
+			event_ramp
+			{
+				0.2545 1.00011
+				0.6533 1.00011
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

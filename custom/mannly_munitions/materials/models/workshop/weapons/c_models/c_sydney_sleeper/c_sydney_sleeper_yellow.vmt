@@ -1,0 +1,9 @@
+"Patch"
+{
+	include "materials/models/workshop/weapons/c_models/c_sydney_sleeper/c_sydney_sleeper.vmt"
+	
+	insert
+	{
+	"$baseTexture" "models/workshop/weapons/c_models/c_sydney_sleeper/c_sydney_sleeper_yellow"
+	}
+}

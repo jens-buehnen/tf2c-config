@@ -1,0 +1,125 @@
+//Choreo version 1
+event loop "drink_idle"
+{
+	time 27.85 -1
+	param "7.000000"
+	loopcount 255
+	
+}
+actor "engy"
+{
+	channel "body"
+	{
+		event sequence "taunt_killer_time_intro"
+		{
+			time 0 27.866667
+			param "taunt_killer_time_intro"
+			fixedlength
+			
+		}
+	}
+	channel "audio"
+	{
+		event speak "engy_taunt_killertime_1_button"
+		{
+			time 0.393333 0.661632
+			param "engy_taunt_killertime_1_button"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "engy_taunt_killertime_4_drink"
+		{
+			time 4.362319 5.831231
+			param "engy_taunt_killertime_4_drink"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "engy_taunt_killertime_2_open"
+		{
+			time 0.506667 1.724331
+			param "engy_taunt_killertime_2_open"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "burp"
+		{
+			time 22.907404 23.469036
+			param "taunt_demo_burp_03"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "engy_taunt_killertime_4_2_drink_long"
+		{
+			time 11.481483 18.173388
+			param "engy_taunt_killertime_4_2_drink_long"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "engy_taunt_killertime_4_3_ahhh"
+		{
+			time 24.293648 25.734985
+			param "engy_taunt_killertime_4_3_ahhh"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+	channel "flex"
+	{
+		event flexanimation "face"
+		{
+			time 0 6.607536
+			param ""
+			flexanimations samples_use_time
+			{
+				"OH"3.59 0 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					4.53 0.427498 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					5.67 0.407888 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+					6.04 0 curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+				}
+			}
+			
+		}
+	}
+	channel "emotion"
+	{
+		event expression "happyBigClosed"
+		{
+			time 1.498841 6.588696
+			param "player\engineer\emotion\emotion"
+			param2 "happyBigClosed"
+			event_ramp
+			{
+				0.3615 0.88245
+				1.068 0.698116
+				2.2 0.70596004
+				2.8207 0.462796
+				3.5001 0.419654
+				3.8385 0.717726
+				4.6385 0.717726
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

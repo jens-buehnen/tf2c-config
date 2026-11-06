@@ -1,0 +1,62 @@
+//Choreo version 1
+actor "medic"
+{
+	channel "audio"
+	{
+		event speak "Medic.Jeers10"
+		{
+			time 0 2.43229
+			param "Medic.Jeers10"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event expression "pain"
+		{
+			time 0.020833 1.415589
+			param "player\medic\emotion\emotion"
+			param2 "pain"
+			event_ramp
+			{
+				0.0485 0.56869
+				0.2576 0.68635
+				0.5485 0.41181
+				1.0788 0.34513602
+				1.2331 0.121582
+			}
+			
+		}
+		event expression "mad"
+		{
+			time 1.063578 2.5
+			param "player\medic\emotion\emotion"
+			param2 "mad"
+			event_ramp
+			{
+				0.097 0.090206005
+				0.1697 0.35298002
+				0.8318 0.34513602
+				1.0648 0.121582
+			}
+			
+		}
+		event sequence "taunt02_v1"
+		{
+			time 0 2.5
+			param "taunt02"
+			fixedlength
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

@@ -1,0 +1,77 @@
+//Choreo version 1
+actor "Heavy"
+{
+	channel "audio"
+	{
+		event speak "Heavy.SpecialCompleted-AssistedKill01"
+		{
+			time 1.587302 3.230114
+			param "Heavy.SpecialCompleted-AssistedKill01"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event sequence "taunt01_v3"
+		{
+			time 0 5.133333
+			param "taunt01"
+			fixedlength
+			
+		}
+	}
+	channel "emotion"
+	{
+		event expression "upperAngry2"
+		{
+			time 1.593969 3.247302
+			param "player\heavy\emotion\emotion"
+			param2 "upperAngry3"
+			event_ramp
+			{
+				0.1636 0.462796
+				0.3091 0.36866802
+				0.5424 0.388278
+				0.9873 0.36866802
+				1.1085 0.219632
+				1.2146 0.36082402
+				1.4512 0.36082402
+			}
+			
+		}
+		event expression "mad"
+		{
+			time 3.030635 4.350635
+			param "player\heavy\emotion\emotion"
+			param2 "happysmall02"
+			event_ramp
+			{
+				0.2273 0.41181
+				0.4636 0.41181
+			}
+			
+		}
+		event expression "mad"
+		{
+			time 0.006825 1.707778
+			param "player\heavy\emotion\emotion"
+			param2 "happysmall02"
+			event_ramp
+			{
+				0.2273 0.41181
+				1.5212 0.423576
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

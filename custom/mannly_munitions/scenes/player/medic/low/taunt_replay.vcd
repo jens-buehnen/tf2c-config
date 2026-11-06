@@ -1,0 +1,36 @@
+//Choreo version 1
+actor "medic"
+{
+	channel "body"
+	{
+		event sequence "taunt_replay"
+		{
+			time 0 3.333333
+			param "taunt_replay"
+			fixedlength
+			
+		}
+		event expression "evilHappy"
+		{
+			time 0.458333 3.309524
+			param "player\medic\emotion\emotion"
+			param2 "evilHappy"
+			event_ramp
+			{
+				0.3147 0.98050004
+				2.6941 1.00011
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

@@ -1,0 +1,69 @@
+//Choreo version 1
+event stoppoint "end"
+{
+	time 2.831051 -1
+	param "noaction"
+	
+}
+actor "Heavy"
+{
+	channel "animation"
+	{
+		event sequence "scout_taunt_replay"
+		{
+			time 0 2.833333
+			param "scout_taunt_replay"
+			fixedlength
+			
+		}
+	}
+	channel "audio"
+	{
+		event expression "happyBig"
+		{
+			time 0.399543 2.79452
+			param "player\scout\emotion\emotion"
+			param2 "happyBig"
+			event_ramp
+			{
+				0.08 0.992266
+				2.0695 1.00011
+			}
+			
+		}
+		event expression "painSmall"
+		{
+			time 0.004566 0.527397
+			param "player\scout\emotion\emotion"
+			param2 "painSmall"
+			event_ramp
+			{
+				0.0467 0.317682
+				0.3567 0.317682
+			}
+			
+		}
+		event expression "aa"
+		{
+			time 0.445206 2.723744
+			param "player\scout\phonemes\phonemes_strong"
+			param2 "aa"
+			event_ramp
+			{
+				0.1967 0.62752
+				2.0004 0.619676
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

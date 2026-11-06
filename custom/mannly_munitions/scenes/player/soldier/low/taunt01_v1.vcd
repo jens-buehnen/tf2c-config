@@ -1,0 +1,50 @@
+//Choreo version 1
+actor "soldier"
+{
+	channel "audio"
+	{
+		event speak "Soldier.HeadLeft03"
+		{
+			time 0.541667 2.207698
+			param "Soldier.HeadLeft03"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event sequence "taunt01_v1"
+		{
+			time 0 2.8
+			param "taunt01"
+			fixedlength
+			
+		}
+	}
+	channel "emotion"
+	{
+		event expression "madUpper"
+		{
+			time 0.541667 2.332699
+			param "player\soldier\emotion\emotion"
+			param2 "madUpper"
+			event_ramp
+			{
+				0.3167 0.251008
+				0.6091 0.662818
+				1.1727 0.72557
+				1.3971 0.925592
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

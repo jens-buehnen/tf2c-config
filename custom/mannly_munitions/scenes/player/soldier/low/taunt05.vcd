@@ -1,0 +1,99 @@
+//Choreo version 1
+actor "soldier"
+{
+	channel "body"
+	{
+		event sequence "taunt05"
+		{
+			time 0 4.3
+			param "taunt05"
+			fixedlength
+			
+		}
+		event expression "specialAction01Upper"
+		{
+			time 0 2.95679
+			param "player\soldier\emotion\emotion"
+			param2 "specialAction01Upper"
+			event_ramp
+			{
+				0.9486 0
+				1.08 0.094128
+				1.2 0.564768
+				1.2943 0.400044
+				1.6829 0.462796
+				1.8143 0.717726
+				1.9571 0.56869
+				2.1029 0.047064
+				2.1686 0
+			}
+			
+		}
+		event expression "mad"
+		{
+			time 2.506173 4.302469
+			param "player\soldier\emotion\emotion"
+			param2 "mad"
+			event_ramp
+			{
+				0.4029 0.80401003
+				0.6473 0.988344
+				0.6918 0.992266
+			}
+			
+		}
+		event expression "painBig"
+		{
+			time 3.240741 3.648148
+			param "player\soldier\emotion\emotion"
+			param2 "painBig"
+			event_ramp
+			{
+				0.1982 0.85107404
+			}
+			
+		}
+	}
+	channel "audio"
+	{
+		event speak "Soldier.PickAxeTaunt04"
+		{
+			time 1.358025 2.674125
+			param "Soldier.PickAxeTaunt04"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event expression "madUpper"
+		{
+			time 1.378858 2.660108
+			param "player\soldier\emotion\emotion"
+			param2 "madUpper"
+			event_ramp
+			{
+				0.0061 0.007844
+				0.0667 0.086284004
+				0.2061 0.76479
+				0.4848 0.807932
+				0.6242 0.35298002
+				0.7242 0.66674
+				0.8273 0.282384
+				1.0333 0.309838
+				1.103 0.043142002
+				1.2545 0.007844
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

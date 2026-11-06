@@ -1,0 +1,172 @@
+//Choreo version 1
+actor "scout"
+{
+	channel "body"
+	{
+		event sequence "taunt_bat_man"
+		{
+			time 0 5.233333
+			param "taunt_bat_man"
+			fixedlength
+			
+		}
+	}
+	channel "audio"
+	{
+		event speak "scout_taunt_batman_1_twirl"
+		{
+			time 0.166667 1.646667
+			param "scout_taunt_batman_1_twirl"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event speak "scout_taunt_batman_2_yawn"
+		{
+			time 2.530303 4.598375
+			param "scout_taunt_batman_2_yawn"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+	channel "expression"
+	{
+		event expression "painSmallUpper"
+		{
+			time 0.026667 1.026667
+			param "player\scout\emotion\emotion"
+			param2 "painSmallUpper"
+			event_ramp
+			{
+				0.052 0.968734
+				0.956 0.976578
+			}
+			
+		}
+		event expression "happyBigUpper"
+		{
+			time 1.106667 1.684646
+			param "player\scout\emotion\emotion"
+			param2 "happyBigUpper"
+			event_ramp
+			{
+				0.094 0.988344
+				0.386 0.988344
+			}
+			
+		}
+		event expression "specialAction01"
+		{
+			time 0.846666 1.213333
+			param "player\scout\emotion\emotion"
+			param2 "specialAction01"
+			event_ramp
+			{
+				0.036 0.972656
+				0.328 0.976578
+			}
+			
+		}
+		event expression "aa"
+		{
+			time 1.133333 1.753333
+			param "player\scout\phonemes\phonemes_strong"
+			param2 "aa"
+			event_ramp
+			{
+				0.048 0.976578
+				0.574 0.976578
+			}
+			
+		}
+		event expression "painSmallUpper"
+		{
+			time 1.606263 2.313333
+			param "player\scout\emotion\emotion"
+			param2 "painSmallUpper"
+			event_ramp
+			{
+				0.086 1.00011
+				0.6371 1.00011
+			}
+			
+		}
+		event expression "painBigUpper"
+		{
+			time 2.026666 3.107878
+			param "player\scout\emotion\emotion"
+			param2 "painBigUpper"
+			event_ramp
+			{
+				0.284 0.717726
+				0.6759 0.98050004
+			}
+			
+		}
+		event expression "happySmallUpper"
+		{
+			time 2.54 4.040001
+			param "player\scout\emotion\emotion"
+			param2 "happySmallUpper"
+			event_ramp
+			{
+				0.322 0.972656
+				1.064 1.00011
+				1.216 0.99618804
+			}
+			
+		}
+		event expression "aa"
+		{
+			time 1.941435 3.340425
+			param "player\scout\phonemes\phonemes_strong"
+			param2 "aa"
+			event_ramp
+			{
+				0.274 0.356902
+				0.592 0.968734
+				0.977 1.00011
+			}
+			
+		}
+		event expression "happySmall"
+		{
+			time 3.424242 5.217172
+			param "player\scout\emotion\emotion"
+			param2 "happySmall"
+			event_ramp
+			{
+				0.298 0.584378
+				0.624 0.188256
+				1.04 0.25493
+				1.464 0.023532
+			}
+			
+		}
+		event expression "happyBigUpper"
+		{
+			time 3.808081 4.207071
+			param "player\scout\emotion\emotion"
+			param2 "happyBigUpper"
+			event_ramp
+			{
+				0.05 0.525548
+				0.158 0.815776
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

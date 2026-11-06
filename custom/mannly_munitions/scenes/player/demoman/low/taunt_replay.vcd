@@ -1,0 +1,51 @@
+//Choreo version 1
+actor "demo"
+{
+	channel "body"
+	{
+		event sequence "taunt07"
+		{
+			time -0 3.333333
+			param "taunt_replay"
+			fixedlength
+			
+		}
+		event expression "evilHappy"
+		{
+			time 0.563218 3.327586
+			param "player\demo\emotion\emotion"
+			param2 "evilHappy"
+			event_ramp
+			{
+				0.1605 1.00011
+				2.6692 1.00011
+			}
+			
+		}
+		event expression "mad"
+		{
+			time 0.005747 0.747126
+			param "player\demo\emotion\emotion"
+			param2 "mad"
+			event_ramp
+			{
+				0.0209 1.00011
+				0.6907 1.00011
+			}
+			
+		}
+	}
+	channel "wav"
+	{
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

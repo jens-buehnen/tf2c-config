@@ -1,0 +1,9 @@
+"Patch"
+{
+	include "materials\models\workshop\weapons\c_models\c_fishcake\c_fishcake.vmt"
+	
+	insert
+	{
+	"$baseTexture" "models\weapons\c_items\c_fishcake_green"
+	}
+}

@@ -1,0 +1,93 @@
+//Choreo version 1
+actor "spy"
+{
+	channel "face"
+	{
+		event sequence "taunt_laugh"
+		{
+			time 0 6.666667
+			param "taunt_laugh"
+			fixedlength
+			
+		}
+		event speak "Spy.LaughLong01"
+		{
+			time 0 6.466757
+			param "Spy.LaughLong01"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event expression "scaredUpper"
+		{
+			time 0.006173 2.401235
+			param "player\spy\emotion\emotion"
+			param2 "scaredUpper"
+			event_ramp
+			{
+				0.1159 1.00011
+				2.2136 1.00011
+			}
+			
+		}
+		event expression "painBig"
+		{
+			time 2.240741 3.240741
+			param "player\spy\emotion\emotion"
+			param2 "painBig"
+			event_ramp
+			{
+				0.1182 0.84323
+				0.8773 0.839308
+			}
+			
+		}
+		event expression "scaredUpper"
+		{
+			time 3.104939 6.635803
+			param "player\spy\emotion\emotion"
+			param2 "painBigUpper"
+			event_ramp
+			{
+				0.1382 0.913826
+				3.4441 0.92167
+			}
+			
+		}
+		event expression "Smile02"
+		{
+			time 0.024691 3.259259
+			param "player\spy\emotion\emotion"
+			param2 "Smile02"
+			event_ramp
+			{
+				0.1632 1.00011
+				3.0628 1.00011
+			}
+			
+		}
+		event expression "happyBig"
+		{
+			time 3.141975 6.641975
+			param "player\spy\emotion\emotion"
+			param2 "happyBig"
+			event_ramp
+			{
+				0.2474 1.00011
+				3.2579 1.00011
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

@@ -1,0 +1,57 @@
+//Choreo version 1
+event stoppoint "end"
+{
+	time 2.828768 -1
+	param "noaction"
+	
+}
+actor "Heavy"
+{
+	channel "animation"
+	{
+		event sequence "spy_replay_taunt"
+		{
+			time 0 2.833333
+			param "spy_replay_taunt"
+			fixedlength
+			
+		}
+	}
+	channel "audio"
+	{
+		event expression "scared"
+		{
+			time 0.004566 0.5
+			param "player\spy\emotion\emotion"
+			param2 "scared"
+			event_ramp
+			{
+				0.2 0.639286
+				0.329 0.890294
+			}
+			
+		}
+		event expression "happyBig"
+		{
+			time 0.426941 2.696347
+			param "player\spy\emotion\emotion"
+			param2 "happyBig"
+			event_ramp
+			{
+				0.2467 0.992266
+				2.14 1.00011
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

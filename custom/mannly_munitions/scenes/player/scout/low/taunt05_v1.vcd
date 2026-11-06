@@ -1,0 +1,111 @@
+//Choreo version 1
+actor "scout"
+{
+	channel "body"
+	{
+		event sequence "taunt_05"
+		{
+			time 0 4.833333
+			param "taunt05"
+			fixedlength
+			
+		}
+		event expression "defaultFace"
+		{
+			time 0.003205 0.484687
+			param "player\scout\emotion\emotion"
+			param2 "defaultFace"
+			event_ramp
+			{
+				0.0389 1.00011
+				0.4042 1.00011
+			}
+			
+		}
+		event expression "painSmallUpper"
+		{
+			time 0.360366 1.360366
+			param "player\scout\emotion\emotion"
+			param2 "painSmallUpper"
+			event_ramp
+			{
+				0.1278 0.99618804
+				0.9583 0.98050004
+			}
+			
+		}
+		event expression "madUpper"
+		{
+			time 1.23263 2.539384
+			param "player\scout\emotion\emotion"
+			param2 "madUpper"
+			event_ramp
+			{
+				0.1569 0.17649001
+				0.3069 1.00011
+				1.1482 1.00011
+			}
+			
+		}
+		event expression "painSmall"
+		{
+			time 2.416651 3.728122
+			param "player\scout\emotion\emotion"
+			param2 "painSmall"
+			event_ramp
+			{
+				0.1194 1.00011
+				1.2514 1.00011
+			}
+			
+		}
+		event expression "specialAction01"
+		{
+			time 3.678879 3.91892
+			param "player\scout\emotion\emotion"
+			param2 "specialAction01"
+			event_ramp
+			{
+				0.0732 0.69027203
+				0.1667 0.894216
+			}
+			
+		}
+		event expression "mad"
+		{
+			time 3.863047 4.613448
+			param "player\scout\emotion\emotion"
+			param2 "mad"
+			event_ramp
+			{
+				0.1253 0.521626
+				0.2556 0.56084603
+				0.4225 1.00011
+				0.7094 0.992266
+			}
+			
+		}
+		event expression "defaultFace"
+		{
+			time 4.531532 4.832858
+			param "player\scout\emotion\emotion"
+			param2 "defaultFace"
+			event_ramp
+			{
+				0.0899 1.00011
+				0.2704 1.00011
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

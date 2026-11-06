@@ -1,0 +1,101 @@
+//Choreo version 1
+actor "Heavy"
+{
+	channel "body"
+	{
+		event sequence "taunt01"
+		{
+			time 0 5.133333
+			param "taunt01"
+			fixedlength
+			
+		}
+	}
+	channel "audio"
+	{
+		event speak "Heavy.Generic01"
+		{
+			time 2.574074 3.386772
+			param "Heavy.Generic01"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+	}
+	channel "emotion"
+	{
+		event expression "upperHappy2"
+		{
+			time 2.570741 3.504074
+			param "player\heavy\emotion\emotion"
+			param2 "upperHappy2"
+			event_ramp
+			{
+				0.1624 1.00011
+				0.7264 1.00011
+			}
+			
+		}
+		event expression "happy1"
+		{
+			time 3.217407 5.060246
+			param "player\heavy\emotion\emotion"
+			param2 "happy1"
+			event_ramp
+			{
+				0.1788 0.7844
+				0.7273 0.98050004
+				1.3925 1.00011
+			}
+			
+		}
+		event expression "happy1"
+		{
+			time 1.708284 2.745321
+			param "player\heavy\emotion\emotion"
+			param2 "happy1"
+			event_ramp
+			{
+				0.38 0.651052
+				1.037 0.651052
+			}
+			
+		}
+		event expression "idleface"
+		{
+			time 0.146555 2.276185
+			param "player\heavy\emotion\emotion"
+			param2 "idleface"
+			event_ramp
+			{
+				0.182 1.00011
+				1.748 1.00011
+				2.1296 0
+			}
+			
+		}
+		event expression "mad"
+		{
+			time 0.344086 1.152728
+			param "player\heavy\emotion\emotion"
+			param2 "mad"
+			event_ramp
+			{
+				0.158 0.57653403
+				0.4926 0.537314
+			}
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off

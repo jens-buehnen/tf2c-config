@@ -1,0 +1,59 @@
+//Choreo version 1
+actor "spy"
+{
+	channel "audio"
+	{
+		event speak "Spy.SpecialCompleted03"
+		{
+			time 0.564103 2.682924
+			param "Spy.SpecialCompleted03"
+			fixedlength
+			
+			cctype "cc_master" 
+			cctoken ""
+		}
+		event expression "mad"
+		{
+			time 2.295674 4.391025
+			param "player\spy\emotion\emotion"
+			param2 "mad"
+			event_ramp
+			{
+				0.1636 0.870684
+				1.4 0.729492
+				1.7341 0.717726
+			}
+			
+		}
+		event expression "madUpper"
+		{
+			time 0.641026 2.705129
+			param "player\spy\emotion\emotion"
+			param2 "madUpper"
+			event_ramp
+			{
+				0.12 0.654974
+				0.89 0.619676
+				1.76 0.654974
+			}
+			
+		}
+		event sequence "taunt01_v2"
+		{
+			time 0 4.3
+			param "taunt01"
+			fixedlength
+			
+		}
+	}
+}
+"scalesettings"
+{
+	"CChoreoView" "100"
+	"SceneRampTool" "100"
+	"ExpressionTool" "100"
+	"GestureTool" "100"
+	"RampTool" "100"
+}
+fps 60
+snap off
