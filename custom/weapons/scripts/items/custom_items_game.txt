@@ -373,11 +373,6 @@
 			}
 			"attributes"
 			{
-				"kill eater score type"
-				{
-					"attribute_class"	"kill_eater_score_type"
-					"value" 	"51" 
-				}
 				"mod soldier buff type"
 				{
 					"attribute_class"	"set_buff_type"
@@ -766,20 +761,10 @@
 					"attribute_class"	"wrench_builds_minisentry"
 					"value"	"1"
 				}
-				"kill eater score type"
+				"disable fancy class select anim"
 				{
-					"attribute_class"	"kill_eater_score_type"
-					"value" 	"3"									
-				}
-				"kill eater score type 2"
-				{
-					"attribute_class"	"kill_eater_score_type_2"
-					"value" 	"0"									
-				}
-				"special taunt"
-				{
-					"attribute_class"	"special_taunt"
-					"value" "1"
+					"attribute_class"	"disable_fancy_class_select_anim"
+					"value"	"1"
 				}
 			}
 			"visuals"
@@ -867,11 +852,6 @@
 				{
 					"attribute_class"	"desc_jarate_description"
 					"value"	"1"
-				}
-				"kill eater score type"
-				{
-					"attribute_class"	"kill_eater_score_type"
-					"value" 	"4"									
 				}
 				"extinguish reduces cooldown"
 				{
@@ -1086,11 +1066,6 @@
 				{
 					"attribute_class"	"mod_cloak_no_regen_from_items"
 					"value"	"1"
-				}
-				"kill eater score type"
-				{
-					"attribute_class"	"kill_eater_score_type"
-					"value"				"9"								
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_watch_pickup.wav"
