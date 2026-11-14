@@ -700,6 +700,90 @@
 		}
 		"3010"
 		{
+			"name"	"The Widowmaker"
+			"item_class"	"tf_weapon_shotgun_primary"
+			"tags"
+			{
+				"bots_cant_use"	"1"
+			}
+			"item_type_name"	"#TF_Weapon_Shotgun"
+			"item_logname" "widowmaker"
+			"item_iconname" "widowmaker"
+			"item_name"	"#TF_DEX_Shotgun"
+			"item_description"	"#TF_DEX_Shotgun_Desc"
+			"item_slot"	"primary"
+			"item_quality"	"normal"
+			"propername"	"1"
+			"image_inventory"	"backpack/workshop_partner/weapons/c_models/c_dex_shotgun/c_dex_shotgun"
+			"model_player"	"models/workshop_partner/weapons/c_models/c_dex_shotgun/c_dex_shotgun.mdl"
+			"attach_to_hands" "1"
+			"used_by_classes"
+			{
+				"engineer"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -9"
+			}
+			"attributes"
+			{
+				"add onhit addammo"
+				{
+					"attribute_class"	"add_onhit_addammo"		
+					"value"	"100"
+				}
+				"mod no reload DISPLAY ONLY"
+				{
+					"attribute_class"	"mod_no_reload_display_only"
+					"value"				"1"
+				}
+				"damage bonus bullet vs sentry target"
+				{
+					"attribute_class"	"mult_dmg_bullet_vs_sentry_target"
+					"value"	"1.1"
+				}
+				"mod ammo per shot"
+				{
+					"attribute_class"	"mod_ammo_per_shot"
+					"value"	"30"
+				}
+				"mod use metal ammo type"
+				{
+					"attribute_class"	"mod_use_metal_ammo_type"
+					"value"	"1"
+				}
+				"mod max primary clip override"
+				{
+					"attribute_class"	"mod_max_primary_clip_override"
+					"value"	"-1"
+				}
+				"hidden separator"
+				{
+					"attribute_class"	"hidden_separator"
+					"value"	"1"
+				}
+				"maxammo metal increased"
+				{
+					"attribute_class"	"mult_maxammo_metal"
+					"value"	"6.67"
+				}
+				
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_WidowMaker.Single"
+				"sound_burst"		"Weapon_WidowMaker.SingleCrit"
+				"sound_empty"		"Weapon_WidowMaker.Empty"
+				"animation_replacement"
+				{
+					"ACT_VM_PRIMARYATTACK"	"ACT_VM_PRIMARYATTACK_SPECIAL"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+		}
+		"3011"
+		{
 			"name"	"PBPP_ENGINEER"
 			"used_by_classes"
 			{
@@ -707,7 +791,7 @@
 			}
 			"prefab"	"PBPP"
 		}
-		"3011"
+		"3012"
 		{
 			"name"	"The Gunslinger"
 			"item_class"	"tf_weapon_robot_arm"
@@ -777,7 +861,7 @@
 			"mouse_pressed_sound"	"ui/item_robot_arm_pickup.wav"
 			"drop_sound"		"ui/item_robot_arm_drop.wav"
 		}
-		"3012"
+		"3013"
 		{
 			"name"	"The Crusader's Crossbow"
 			"item_class"	"tf_weapon_crossbow"
@@ -821,7 +905,7 @@
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
-		"3013"
+		"3014"
 		{
 			"name"	"Jarate"
 			"item_class"	"tf_weapon_jar"
@@ -862,7 +946,7 @@
 			"mouse_pressed_sound"	"ui/item_bottle_pickup.wav"
 			"drop_sound"		"ui/item_bottle_drop.wav"
 		}
-		"3014"
+		"3015"
 		{
 			"name"	"The Bushwacka"
 			"item_class"	"tf_weapon_club"
@@ -910,7 +994,7 @@
 				}
 			}
 		}
-		"3015"
+		"3016"
 		{
 			"name"	"L'Etranger"
 			"item_class"	"tf_weapon_revolver"
@@ -958,7 +1042,7 @@
 				"sound_burst"	"Weapon_Letranger.SingleCrit"
 			}
 		}
-		"3016"
+		"3017"
 		{
 			"name"	"Conniver's Kunai"
 			"item_class"	"tf_weapon_knife"
@@ -1011,7 +1095,7 @@
 			"mouse_pressed_sound"	"ui/item_knife_small_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
-		"3017"
+		"3018"
 		{
 			"name"	"The Dead Ringer"
 			"item_class"	"tf_weapon_invis"
